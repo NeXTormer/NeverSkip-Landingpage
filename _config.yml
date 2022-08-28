@@ -10,9 +10,9 @@ playstore_link                            : https://play.google.com/store/apps/d
 presskit_download_link                    : https://hawkford.io                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
-app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
+app_icon                                  : assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : NeverSkip Fitness                                          # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_price                                 : € 6.99 (30 day free trial)                                          # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_description                           : Ever set a fitness goal and quit halfway through? NeverSkip keeps you motivated all the way through and helps you build healthy behaviors.
 
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
@@ -23,7 +23,7 @@ enable_smart_app_banner                   : true                                
 your_name                                 : Felix Holz                                
 your_link                                 :                      
 your_city                                 : Graz                                
-email_address                             : felix.holz@me.com
+email_address                             : 
 facebook_username                         :                                           
 instagram_username                        : nextormer
 twitter_username                          : 
@@ -35,45 +35,45 @@ youtube_username                          :
 # Feature List                            Edit, add or remove features to be presented.
 features                                  :
 
-  - title                                 : GitHub Pages Jekyll Theme
-    description                           : Designed for GitHub Pages. Fork. Edit _config.yml. Upload screenshot/video. Push to gh-pages branch. Voilá!
-    fontawesome_icon_name                 : magic
+  - title                                 : Calendar
+    description                           : A beautiful and simple calendar which shows you the upcoming exercises from your workout plan.
+    fontawesome_icon_name                 : calendar
     
-  - title                                 : iPhone Device Preview
-    description                           : Preview your app in the context of an iPhone device. Five different device colors included.
-    fontawesome_icon_name                 : mobile
+  - title                                 : Performance tracking
+    description                           : Document your fitness journey. See how well you did last workout and how far you have come.
+    fontawesome_icon_name                 : chart_mixed
 
-  - title                                 : Video Support
-    description                           : Preview app video on the iPhone device simply by placing your video files in the videos folder.
-    fontawesome_icon_name                 : play-circle
+  - title                                 : Workout planner
+    description                           : Plan your own workouts with your own schedule, or use a workout provided by us.
+    fontawesome_icon_name                 : memo
 
-  - title                                 : Automatic Icon and Metadata
-    description                           : Enter iOS app ID in the _config.yml file to automatically fetch app icon, price and App Store Link.
-    fontawesome_icon_name                 : sync
+  - title                                 : Charts and analysis
+    description                           : Various charts let you keep an eye on your progress and keeps you motivated.
+    fontawesome_icon_name                 : chart-line-up
 
-  - title                                 : Easy to Tweak
-    description                           : Tweak accent color, images, icons and transparency via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : adjust
+  - title                                 : Goals and achievements
+    description                           : Set goals for specific exercises, or anything else you want. Your completed goals are displayed in a list of all your achievements.
+    fontawesome_icon_name                 : bullseye-arrow
   
-  - title                                 : Feature List
-    description                           : Add features (like this one) to your site via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : star
+  - title                                 : Simple
+    description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
+    fontawesome_icon_name                 : sparkles
 
-  - title                                 : Smart App Banner
-    description                           : Display a smart app banner on iOS devices.
-    fontawesome_icon_name                 : arrow-alt-circle-down
+#  - title                                 : Smart App Banner
+#    description                           : Display a smart app banner on iOS devices.
+#    fontawesome_icon_name                 : arrow-alt-circle-down
 
-  - title                                 : Social Links
-    description                           : Easily add social media accounts and contact info in the footer via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : link
+#  - title                                 : Social Links
+#    description                           : Easily add social media accounts and contact info in the footer via the _config.yml file. No HTML/CSS needed.
+#    fontawesome_icon_name                 : link
 
-  - title                                 : FontAwesome Support
-    description                           : Pick custom Font Awesome icons for the feature list via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : info-circle
+#  - title                                 : FontAwesome Support
+#    description                           : Pick custom Font Awesome icons for the feature list via the _config.yml file. No HTML/CSS needed.
+#    fontawesome_icon_name                 : info-circle
 
-  - title                                 : # New Feature Title
-    description                           : # New Feature Description
-    fontawesome_icon_name                 : # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
+#  - title                                 : # New Feature Title
+#    description                           : # New Feature Description
+#    fontawesome_icon_name                 : # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
 
 
 
@@ -82,11 +82,11 @@ topbar_color                              : "#000000"
 topbar_transparency                       : 0.1
 topbar_title_color                        : "#ffffff"
 
-cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
-cover_overlay_color                       : "#363b3d"
+cover_image                               : assets/background.png                    # Replace with alternative image path or image URL.
+cover_overlay_color                       : "#4ecbf5" # "#363b3d"
 cover_overlay_transparency                : 0.8
 
-device_color                              : black                                     # Set to: blue, black, yellow, coral or white.
+device_color                              : white                                     # Set to: blue, black, yellow, coral or white.
 
 body_background_color                     : "#ffffff"
 

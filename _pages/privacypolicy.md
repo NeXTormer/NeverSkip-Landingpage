@@ -9,49 +9,40 @@ October 10 2021
 
 "NeverSkip Fitness" is part of the Felix Holz Einzelunternehmen, which will be referred to as "Our Company". This privacy policy will explain how our Company uses the personal data we collect from you when you use our application.
 
-Topics:
+## Topics:
 
-    What data do we collect?
-    How do we collect your data?
-    How will we use your data?
-    How do we store your data?
-    Marketing
-    What are your data protection rights?
-    What are cookies?
-    How do we use cookies?
-    What types of cookies do we use?
-    How to manage your cookies
-    Privacy policies of other websites
-    Changes to our privacy policy
-    How to contact us
-    How to contact the appropriate authorities
+- What data do we collect?
+- How do we collect your data?
+- How will we use your data?
+- How do we store your data?
+- What are your data protection rights?
+- How to contact us
 
 ## What data do we collect?
 ### Our Company collects the following data:
 
-    All information entered in our app, including but not limited to Personal identification information (Name, email address, ...), your fitness data
-    Anonymised logs for analytics purposes containing device information, general location, language and app usage data
+All information entered in our app, including but not limited to Personal identification information (Name, email address, ...), your fitness data, nonymised logs for analytics purposes containing device information, general location, language and app usage data
 
 ## The app does use third party services that may collect information used to identify you.
 ### You can view the privacy policies of these services here:
 
-    Google Play Services
-    Google Analytics for Firebase
-    Google Firebase
+- Google Play Services
+- Google Analytics for Firebase
+- Google Firebase
 
 ## How do we collect your data?
 ### You directly provide Our Company with most of the data we collect. We collect data and process data when you:
 
-    Sign up in our app ("Frederic")
-    Enter any data in our app (for example fitness data, your name, profile pictures, goals, and so on)
-    Open the app (analytics data only)
+- Sign up in our app ("Frederic")
+- Enter any data in our app (for example fitness data, your name, profile pictures, goals, and so on)
+- Open the app (analytics data only)
 
 ## How will we use your data?
 ### Our Company collects your data so that we can:
 
-    Safely store your data on the cloud
-    Provide you with recommendations
-    Improve your experience using anonymous analytics data
+- Safely store your data on the cloud
+- Provide you with recommendations
+- Improve your experience using anonymous analytics data
 
 Our Company will NOT sell your personal data for financial gain.
 
