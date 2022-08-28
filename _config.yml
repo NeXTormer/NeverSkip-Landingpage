@@ -22,7 +22,7 @@ enable_smart_app_banner                   : true                                
 # Information About Yourself
 your_name                                 : Felix Holz                                
 your_link                                 :                      
-your_city                                 : Graz                                
+your_city                                 : Graz, AT                                
 email_address                             : 
 facebook_username                         :                                           
 instagram_username                        : nextormer
@@ -41,7 +41,7 @@ features                                  :
     
   - title                                 : Performance tracking
     description                           : Document your fitness journey. See how well you did last workout and how far you have come.
-    fontawesome_icon_name                 : chart_mixed
+    fontawesome_icon_name                 : chart-mixed
 
   - title                                 : Workout planner
     description                           : Plan your own workouts with your own schedule, or use a workout provided by us.
@@ -55,7 +55,7 @@ features                                  :
     description                           : Set goals for specific exercises, or anything else you want. Your completed goals are displayed in a list of all your achievements.
     fontawesome_icon_name                 : bullseye-arrow
   
-  - title                                 : Simple
+  - title                                 : Simple design
     description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
     fontawesome_icon_name                 : sparkles
 
@@ -84,7 +84,7 @@ topbar_title_color                        : "#ffffff"
 
 cover_image                               : assets/background.png                    # Replace with alternative image path or image URL.
 cover_overlay_color                       : "#4ecbf5" # "#363b3d"
-cover_overlay_transparency                : 0.0
+cover_overlay_transparency                : 1.0
 
 device_color                              : white                                     # Set to: blue, black, yellow, coral or white.
 
