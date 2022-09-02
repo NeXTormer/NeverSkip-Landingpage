@@ -37,7 +37,7 @@ features                                  :
 
   - title                                 : Calendar
     description                           : A beautiful and simple calendar which shows you the upcoming exercises from your workout plan.
-    fontawesome_icon_name                 : calendar
+    fontawesome_icon_name                 : calendar-week
     
   - title                                 : Performance tracking
     description                           : Document your fitness journey. See how well you did last workout and how far you have come.
