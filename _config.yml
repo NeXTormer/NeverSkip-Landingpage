@@ -37,27 +37,27 @@ features                                  :
 
   - title                                 : Calendar
     description                           : A beautiful and simple calendar which shows you the upcoming exercises from your workout plan.
-    fontawesome_icon_name                 : calendar
+    fontawesome_icon_name                 : calendar-week
     
   - title                                 : Performance tracking
     description                           : Document your fitness journey. See how well you did last workout and how far you have come.
-    fontawesome_icon_name                 : chart-mixed
+    fontawesome_icon_name                 : chart-line
 
   - title                                 : Workout planner
     description                           : Plan your own workouts with your own schedule, or use a workout provided by us.
-    fontawesome_icon_name                 : memo
+    fontawesome_icon_name                 : calendar-alt
 
   - title                                 : Charts and analysis
     description                           : Various charts let you keep an eye on your progress and keeps you motivated.
-    fontawesome_icon_name                 : chart-line-up
+    fontawesome_icon_name                 : chart-bar
 
   - title                                 : Goals and achievements
     description                           : Set goals for specific exercises, or anything else you want. Your completed goals are displayed in a list of all your achievements.
-    fontawesome_icon_name                 : bullseye-arrow
+    fontawesome_icon_name                 : bullseye
   
   - title                                 : Simple design
     description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
-    fontawesome_icon_name                 : sparkles
+    fontawesome_icon_name                 : object-group
 
 # Theme Settings
 topbar_color                              : "#000000"
