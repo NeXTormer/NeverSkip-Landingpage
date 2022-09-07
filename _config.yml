@@ -1,5 +1,5 @@
 #page title
-page_title                                : NeverSkip Fitness                                          # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+page_title                                : NeverSkip Fitness - A simple personal workout tracker                                       # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
 # App Info
 ios_app_id                                : 1560521531                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
@@ -58,24 +58,6 @@ features                                  :
   - title                                 : Simple design
     description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
     fontawesome_icon_name                 : sparkles
-
-#  - title                                 : Smart App Banner
-#    description                           : Display a smart app banner on iOS devices.
-#    fontawesome_icon_name                 : arrow-alt-circle-down
-
-#  - title                                 : Social Links
-#    description                           : Easily add social media accounts and contact info in the footer via the _config.yml file. No HTML/CSS needed.
-#    fontawesome_icon_name                 : link
-
-#  - title                                 : FontAwesome Support
-#    description                           : Pick custom Font Awesome icons for the feature list via the _config.yml file. No HTML/CSS needed.
-#    fontawesome_icon_name                 : info-circle
-
-#  - title                                 : # New Feature Title
-#    description                           : # New Feature Description
-#    fontawesome_icon_name                 : # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
-
-
 
 # Theme Settings
 topbar_color                              : "#000000"
