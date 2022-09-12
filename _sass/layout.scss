@@ -475,7 +475,7 @@ nav > ul li a:active {
 	grid-area: c;
 	display: flex;
 	flex: 0 1 auto;
-	align-content: flex-start;
+	align-content: space-between;
 	justify-content: flex-start;
 	flex-grow: 1;
 	flex-wrap: wrap;

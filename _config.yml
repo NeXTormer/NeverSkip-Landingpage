@@ -49,7 +49,7 @@ features                                  :
 
   - title                                 : Sharing
     description                           : Share your progress and your last workout session on social media to motivate your friends and get better together.
-    fontawesome_icon_name                 : up-right-from-square
+    fontawesome_icon_name                 : share-square
 
   - title                                 : Charts and analysis
     description                           : Various charts let you keep an eye on your progress and keeps you motivated.
