@@ -47,6 +47,10 @@ features                                  :
     description                           : Plan your own workouts with your own schedule, or use a workout provided by us.
     fontawesome_icon_name                 : calendar-alt
 
+  - title                                 : Sharing
+    description                           : Share your progress and your last workout session on social media to motivate your friends and get better together.
+    fontawesome_icon_name                 : up-right-from-square
+
   - title                                 : Charts and analysis
     description                           : Various charts let you keep an eye on your progress and keeps you motivated.
     fontawesome_icon_name                 : chart-bar
