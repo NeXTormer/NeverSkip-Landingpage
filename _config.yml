@@ -59,9 +59,9 @@ features                                  :
     description                           : Set goals for specific exercises, or anything else you want. Your completed goals are displayed in a list of all your achievements.
     fontawesome_icon_name                 : bullseye
   
-  - title                                 : Simple design
-    description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
-    fontawesome_icon_name                 : object-group
+  #- title                                 : Simple design
+  #  description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
+  #  fontawesome_icon_name                 : object-group
 
 # Theme Settings
 topbar_color                              : "#000000"
