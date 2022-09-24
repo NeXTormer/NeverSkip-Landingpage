@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-October 10 2021
+Sepember 24 2022
 
 "NeverSkip Fitness" is part of the Felix Holz Einzelunternehmen, which will be referred to as "Our Company". This privacy policy will explain how our Company uses the personal data we collect from you when you use our application.
 
@@ -68,9 +68,9 @@ Our Company would like to make sure you are fully aware of all of your data prot
 *The right to data portability* – You have the right to request that Our Company transfer the data that we have collected to another organization, or directly to you, under certain conditions.
 
 If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, 
-please contact us at our email: office@hawkford.io
+please contact us at our email: neverskipfitness@icloud.com
 
 ## How to contact us
 If you have any questions about Our Company’s privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.
 
-Email us at: office@hawkford.io
+Email us at: neverskipfitness@icloud.com
