@@ -7,7 +7,7 @@ ios_app_country                           : at                                  
 
 appstore_link                             :                                          # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
 playstore_link                            : https://play.google.com/store/apps/details?id=io.hawkford.fredericapp                                          # Enter Google Play Store URL.
-presskit_download_link                    : /assets/neverskip_presskit.zip                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
+presskit_download_link                    : /assets/neverskip_presskit.zip                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
 app_icon                                  : assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
@@ -22,13 +22,13 @@ enable_smart_app_banner                   : true                                
 other_files_icon                          : assets/files_favicon.png
 
 # Information About Yourself
-your_name                                 : Felix Holz                                
-your_link                                 :                      
-your_city                                 : Graz, AT                                
-email_address                             : 
-facebook_username                         :                                           
-instagram_username                        : nextormer
-twitter_username                          : 
+your_name                                 : Felix Holz
+your_link                                 :
+your_city                                 : Graz, AT
+email_address                             :
+facebook_username                         :
+instagram_username                        : neverskipfitness
+twitter_username                          :
 github_username                           : nextormer
 youtube_username                          :
 
@@ -40,7 +40,7 @@ features                                  :
   - title                                 : Calendar
     description                           : A beautiful and simple calendar which shows you the upcoming exercises from your workout plan.
     fontawesome_icon_name                 : calendar-week
-    
+
   - title                                 : Performance tracking
     description                           : Document your fitness journey. See how well you did last workout and how far you have come.
     fontawesome_icon_name                 : chart-line
@@ -60,7 +60,7 @@ features                                  :
   - title                                 : Goals and achievements
     description                           : Set goals for specific exercises, or anything else you want. Your completed goals are displayed in a list of all your achievements.
     fontawesome_icon_name                 : bullseye
-  
+
   #- title                                 : Simple design
   #  description                           : NeverSkip is designed to make the user-experience as simple as possible to not get in the way of your training.
   #  fontawesome_icon_name                 : object-group
