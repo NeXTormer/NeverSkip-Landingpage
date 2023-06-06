@@ -34,7 +34,7 @@ All information entered in our app, including but not limited to Personal identi
 ## How do we collect your data?
 ### You directly provide Our Company with most of the data we collect. We collect data and process data when you:
 
-- Sign up in our app ("Frederic")
+- Sign up in our app ("NeverSkip Fitness")
 - Enter any data in our app (for example fitness data, your name, profile pictures, goals, and so on)
 - Open the app (analytics data only)
 

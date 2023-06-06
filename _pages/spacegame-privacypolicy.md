@@ -8,7 +8,7 @@ include_in_footer: false
 **Last updated**  
 Sepember 24 2022
 
-"NeverSkip Fitness" is part of the Felix Holz Einzelunternehmen, which will be referred to as "Our Company". This privacy policy will explain how our Company uses the personal data we collect from you when you use our application.
+"SpaceGame" is part of the Felix Holz Einzelunternehmen, which will be referred to as "Our Company". This privacy policy will explain how our Company uses the personal data we collect §om you when you use our application.
 
 ## Topics:
 
@@ -34,8 +34,7 @@ All information entered in our app, including but not limited to Personal identi
 ## How do we collect your data?
 ### You directly provide Our Company with most of the data we collect. We collect data and process data when you:
 
-- Sign up in our app ("Frederic")
-- Enter any data in our app (for example fitness data, your name, profile pictures, goals, and so on)
+- Enter any data in our app (score, username)
 - Open the app (analytics data only)
 
 ## How will we use your data?
