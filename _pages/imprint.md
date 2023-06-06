@@ -11,9 +11,9 @@ June 06 2023
 
 ## Imprint / Impressum
 
-Felix Holz
-Petersgasse 119
-8010 Graz
+Felix Holz  
+Petersgasse 119  
+8010 Graz  
 
 Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik
 

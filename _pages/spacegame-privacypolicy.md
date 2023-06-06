@@ -6,7 +6,7 @@ include_in_footer: false
 ---
 
 **Last updated**  
-Sepember 24 2022
+June 06 2023
 
 "SpaceGame" is part of the Felix Holz Einzelunternehmen, which will be referred to as "Our Company". This privacy policy will explain how our Company uses the personal data we collect §om you when you use our application.
 
