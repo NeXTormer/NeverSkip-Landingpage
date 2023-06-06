@@ -2,6 +2,7 @@
 layout: page-no-header
 title: Seelenschreiber - Privacy Policy
 include_in_header: false
+include_in_footer: false
 ---
 
 Der Seelenschreiber - Privacy Policy

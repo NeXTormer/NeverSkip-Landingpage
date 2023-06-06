@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Privacy Policy
-include_in_header: true
-include_in_footer: true
+layout: page-no-header
+title: SpaceGame - Privacy Policy
+include_in_header: false
+include_in_footer: false
 ---
 
 **Last updated**  

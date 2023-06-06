@@ -2,6 +2,7 @@
 layout: page-no-header
 title: Magischer Zauberwald - Privacy Policy
 include_in_header: false
+include_in_footer: false
 ---
 
 Magischer Zauberwald - Privacy Policy
