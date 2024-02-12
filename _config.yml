@@ -38,7 +38,7 @@ youtube_username                          :
 features                                  :
 
   - title                                 : Calendar
-    description                           : A beautiful and simple calendar which shows you the upcoming exercises from your workout plan.
+    description                           : A simple and beautiful calendar which shows you the upcoming exercises from your workout plan.
     fontawesome_icon_name                 : calendar-week
 
   - title                                 : Performance tracking
