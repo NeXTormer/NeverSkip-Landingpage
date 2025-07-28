@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet" />
+    <title>Aurora Expeditions</title>
+    <!-- Favicon -->
+    <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏔️</text></svg>" rel="icon">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        /* Bright Theme Color Palette:
+          - A clean, professional, and modern color scheme.
+          - Uses a vibrant blue for primary actions and highlights.
+          - Employs a range of grays for text and backgrounds for readability and visual hierarchy.
+        */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #475569;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        /* Custom focus styles for the FAQ accordion.
+          This allows the accordion to expand on focus without JavaScript.
+        */
+        .group:focus .group-focus\:block {
+            display: block;
+        }
+
+        .group:focus .group-focus\:rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--background-color)]" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- 
+              Header:
+              - Sticky to the top for easy navigation.
+              - Includes the logo, desktop navigation, and a call-to-action button.
+              - Contains the mobile menu button and the mobile menu itself, which is hidden on larger screens.
+            -->
+            <header class="relative sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] bg-[var(--background-color)]/80 px-4 py-4 backdrop-blur-sm sm:px-10">
+                <div class="flex items-center gap-4 text-[var(--text-primary)]">
+                    <div class="size-7 text-[var(--primary-color)]">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--text-primary)]">Aurora Expeditions</h2>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-9">
+                    <a class="text-sm font-medium leading-normal text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">Trips</a>
+                    <a class="text-sm font-medium leading-normal text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
+                    <a class="text-sm font-medium leading-normal text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">Gallery</a>
+                    <a class="text-sm font-medium leading-normal text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors">
+                        <span class="truncate">Book Now</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden text-[var(--text-primary)] p-2 rounded-md hover:bg-gray-200 transition-colors">
+                        <svg id="menu-open-icon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="3" x2="21" y1="12" y2="12"></line>
+                            <line x1="3" x2="21" y1="6" y2="6"></line>
+                            <line x1="3" x2="21" y1="18" y2="18"></line>
+                        </svg>
+                        <svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <line x1="18" y1="6" x2="6" y2="18"></line>
+                           <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Menu Panel -->
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[var(--background-color)]/95 backdrop-blur-sm border-b border-[var(--border-color)]">
+                    <nav class="flex flex-col items-start gap-1 p-4">
+                        <a class="w-full text-left p-3 rounded-md font-medium text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--primary-color)] transition-colors" href="#">Trips</a>
+                        <a class="w-full text-left p-3 rounded-md font-medium text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
+                        <a class="w-full text-left p-3 rounded-md font-medium text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--primary-color)] transition-colors" href="#">Gallery</a>
+                        <a class="w-full text-left p-3 rounded-md font-medium text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
+                        <button class="w-full mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors">
+                          <span class="truncate">Book Now</span>
+                        </button>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="flex-1 text-[var(--text-primary)]">
+                <!-- Hero Section -->
+                <section class="relative flex min-h-[60vh] md:min-h-[calc(100vh-68px)] flex-col items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://images.unsplash.com/photo-1570990202310-381519744acd?q=80&w=2940&auto=format&fit=crop");'>
+                    <div class="max-w-4xl px-4">
+                        <h1 class="text-4xl font-black leading-tight tracking-tighter md:text-6xl">Capture the Untamed Beauty of Iceland</h1>
+                        <p class="mt-4 text-lg font-light md:text-xl text-gray-200"> Join our exclusive photography expeditions, led by seasoned local guides, to immortalize the ethereal landscapes of Iceland. </p>
+                        <button class="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-[var(--primary-color)] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-transform transform hover:scale-105">
+                            <span class="truncate">Explore Our Trips</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Why Choose Us Section -->
+                <section class="bg-[var(--background-color)] py-20 sm:py-24 px-4 sm:px-10">
+                    <div class="max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Why Choose Us?</h2>
+                        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="flex flex-col items-center text-center p-6 bg-[var(--card-background)] rounded-xl border border-[var(--border-color)] transition-transform transform hover:-translate-y-2">
+                                <div class="text-[var(--primary-color)] mb-4">
+                                    <svg class="lucide lucide-map-pin" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold">Expert Local Guidance</h3>
+                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Our guides are native Icelanders and seasoned photographers.</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-6 bg-[var(--card-background)] rounded-xl border border-[var(--border-color)] transition-transform transform hover:-translate-y-2">
+                                <div class="text-[var(--primary-color)] mb-4">
+                                    <svg class="lucide lucide-camera" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+                                        <circle cx="12" cy="13" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold">Photography-Focused</h3>
+                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Itineraries designed to catch the best light and locations.</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-6 bg-[var(--card-background)] rounded-xl border border-[var(--border-color)] transition-transform transform hover:-translate-y-2">
+                                <div class="text-[var(--primary-color)] mb-4">
+                                    <svg class="lucide lucide-users" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold">Small Group Sizes</h3>
+                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Personalized attention and a more intimate experience.</p>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-6 bg-[var(--card-background)] rounded-xl border border-[var(--border-color)] transition-transform transform hover:-translate-y-2">
+                                <div class="text-[var(--primary-color)] mb-4">
+                                    <svg class="lucide lucide-shield-check" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold">All-Inclusive Planning</h3>
+                                <p class="mt-2 text-sm text-[var(--text-secondary)]">We handle all the logistics, so you can focus on photography.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing Section -->
+                <section class="bg-[var(--card-background)] py-20 sm:py-24 px-4 sm:px-10 border-y border-[var(--border-color)]">
+                    <div class="max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Pricing and Duration</h2>
+                        <p class="mt-4 max-w-3xl mx-auto text-center text-lg text-[var(--text-secondary)]">Every booking starts with a free, no-obligation consultation to ensure our expedition is the perfect fit for you. We recommend a trip duration between one and three weeks for a comprehensive exploration.</p>
+                        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="flex flex-col p-8 bg-[var(--background-color)] rounded-xl border border-[var(--border-color)] text-center transition-transform transform hover:-translate-y-2">
+                                <h3 class="text-2xl font-bold text-[var(--primary-color)]">Weekender</h3>
+                                <p class="mt-2 text-4xl font-bold text-[var(--text-primary)]">$1,500+</p>
+                                <p class="mt-4 text-[var(--text-secondary)]">A condensed 3-day trip hitting the iconic spots of the south coast.</p>
+                                <button class="mt-6 w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[var(--primary-color)] hover:text-white transition-colors">
+                                    <span class="truncate">Start with a Consultation</span>
+                                </button>
+                            </div>
+                            <div class="flex flex-col p-8 bg-[var(--background-color)] rounded-xl border-2 border-[var(--primary-color)] text-center transition-transform transform hover:-translate-y-2 relative">
+                                <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[var(--primary-color)] text-white px-3 py-1 text-sm font-bold rounded-full">Most Popular</div>
+                                <h3 class="text-2xl font-bold text-[var(--primary-color)]">Adventurer</h3>
+                                <p class="mt-2 text-4xl font-bold text-[var(--text-primary)]">$3,500+</p>
+                                <p class="mt-4 text-[var(--text-secondary)]">A 7-day immersive journey covering the southern and eastern regions.</p>
+                                <button class="mt-6 w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors">
+                                    <span class="truncate">Start with a Consultation</span>
+                                </button>
+                            </div>
+                            <div class="flex flex-col p-8 bg-[var(--background-color)] rounded-xl border border-[var(--border-color)] text-center transition-transform transform hover:-translate-y-2">
+                                <h3 class="text-2xl font-bold text-[var(--primary-color)]">Grand Expedition</h3>
+                                <p class="mt-2 text-4xl font-bold text-[var(--text-primary)]">$7,000+</p>
+                                <p class="mt-4 text-[var(--text-secondary)]">A 14-day comprehensive tour around the entire island.</p>
+                                <button class="mt-6 w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-transparent border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[var(--primary-color)] hover:text-white transition-colors">
+                                    <span class="truncate">Start with a Consultation</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Meet the Guide Section -->
+                <section class="py-20 sm:py-24 px-4 sm:px-10">
+                    <div class="max-w-5xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Meet Your Guide</h2>
+                        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+                            <div class="md:col-span-1 flex justify-center">
+                                <img alt="Portrait of Elias Bjornsson" class="rounded-full h-48 w-48 object-cover border-4 border-white shadow-lg" src="https://images.unsplash.com/photo-1580518247974-6a8968c69a53?q=80&w=2787&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/192x192/E2E8F0/475569?text=Elias+B.';"/>
+                            </div>
+                            <div class="md:col-span-2 text-center md:text-left">
+                                <h3 class="text-2xl font-bold">Elias Bjornsson</h3>
+                                <p class="mt-2 text-lg font-medium text-[var(--primary-color)]">Professional Photographer &amp; Local Expert</p>
+                                <p class="mt-4 text-[var(--text-secondary)]"> With over 15 years of experience capturing Iceland's dramatic landscapes, I'm passionate about sharing its secrets and helping you create images that tell a story. My deep-rooted connection to this land allows me to guide you to not just the iconic spots, but also the hidden gems. </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Itinerary Highlights Section -->
+                <section class="bg-[var(--card-background)] py-20 sm:py-24 px-4 sm:px-10 border-y border-[var(--border-color)]">
+                    <div class="max-w-7xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Itinerary Highlights</h2>
+                        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="group overflow-hidden rounded-xl border border-[var(--border-color)]">
+                                <div class="relative">
+                                    <img alt="Jokulsarlon Glacier Lagoon" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1543598334-86d3d443336f?q=80&w=2849&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/475569?text=Jokulsarlon';">
+                                    <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                                </div>
+                                <div class="p-6 bg-[var(--card-background)]">
+                                    <h3 class="text-lg font-bold">Jokulsarlon Glacier Lagoon</h3>
+                                    <p class="mt-2 text-sm text-[var(--text-secondary)]">Witness the mesmerizing beauty of icebergs floating in a glacial lagoon.</p>
+                                </div>
+                            </div>
+                            <div class="group overflow-hidden rounded-xl border border-[var(--border-color)]">
+                                <div class="relative">
+                                    <img alt="Skogafoss Waterfall" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1500043135898-ab3b6a414329?q=80&w=2940&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/475569?text=Skogafoss';">
+                                    <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                                </div>
+                                <div class="p-6 bg-[var(--card-background)]">
+                                    <h3 class="text-lg font-bold">Skogafoss Waterfall</h3>
+                                    <p class="mt-2 text-sm text-[var(--text-secondary)]">Capture the power and majesty of one of Iceland's most iconic waterfalls.</p>
+                                </div>
+                            </div>
+                            <div class="group overflow-hidden rounded-xl border border-[var(--border-color)]">
+                                <div class="relative">
+                                    <img alt="Reynisfjara Black Sand Beach" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1589619103318-29c429334a94?q=80&w=2832&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/475569?text=Reynisfjara';">
+                                    <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                                </div>
+                                <div class="p-6 bg-[var(--card-background)]">
+                                    <h3 class="text-lg font-bold">Reynisfjara Black Sand Beach</h3>
+                                    <p class="mt-2 text-sm text-[var(--text-secondary)]">Explore the dramatic black sand beach with basalt columns and sea stacks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-20 sm:py-24 px-4 sm:px-10">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Frequently Asked Questions</h2>
+                        <div class="mt-12 space-y-4">
+                            <div class="group rounded-xl border border-[var(--border-color)] overflow-hidden" tabindex="0">
+                                <div class="flex cursor-pointer items-center justify-between bg-[var(--card-background)] p-4">
+                                    <h3 class="text-lg font-medium">What photography skill level is required?</h3>
+                                    <svg class="h-6 w-6 text-[var(--text-secondary)] transition-transform duration-300 group-focus:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <div class="hidden bg-[var(--card-background)] p-4 pt-0 group-focus:block">
+                                    <p class="text-[var(--text-secondary)]">Our tours are open to all skill levels, from beginners to seasoned professionals. Our guides provide personalized instruction to help you improve your photography, regardless of your experience.</p>
+                                </div>
+                            </div>
+                            <div class="group rounded-xl border border-[var(--border-color)] overflow-hidden" tabindex="0">
+                                <div class="flex cursor-pointer items-center justify-between bg-[var(--card-background)] p-4">
+                                    <h3 class="text-lg font-medium">What equipment should I bring?</h3>
+                                    <svg class="h-6 w-6 text-[var(--text-secondary)] transition-transform duration-300 group-focus:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <div class="hidden bg-[var(--card-background)] p-4 pt-0 group-focus:block">
+                                    <p class="text-[var(--text-secondary)]">We recommend a DSLR or mirrorless camera with interchangeable lenses. A sturdy tripod is essential for long exposures, and a wide-angle lens is great for landscapes. Don't forget extra batteries, memory cards, and weather protection for your gear.</p>
+                                </div>
+                            </div>
+                            <div class="group rounded-xl border border-[var(--border-color)] overflow-hidden" tabindex="0">
+                                <div class="flex cursor-pointer items-center justify-between bg-[var(--card-background)] p-4">
+                                    <h3 class="text-lg font-medium">What is the expected physical fitness level?</h3>
+                                    <svg class="h-6 w-6 text-[var(--text-secondary)] transition-transform duration-300 group-focus:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                                <div class="hidden bg-[var(--card-background)] p-4 pt-0 group-focus:block">
+                                    <p class="text-[var(--text-secondary)]">Most locations are accessible with minimal hiking. However, some spots may require short walks on uneven terrain. A moderate level of fitness is recommended to fully enjoy the experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="bg-[var(--card-background)] py-20 sm:py-24 px-4 sm:px-10 border-y border-[var(--border-color)]">
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-3xl font-bold tracking-tight text-center sm:text-4xl">Words From Our Adventurers</h2>
+                        <div class="mt-12 space-y-8">
+                            <div class="p-8 bg-[var(--background-color)] rounded-xl border border-[var(--border-color)]">
+                                <div class="flex items-center gap-4">
+                                    <img alt="Sophia Carter" class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/48x48/E2E8F0/475569?text=SC';"/>
+                                    <div>
+                                        <p class="font-semibold">Sophia Carter</p>
+                                        <div class="flex text-yellow-400 mt-1">
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <blockquote class="mt-4 italic text-[var(--text-secondary)]">"The photography tour with Elias was an incredible experience! His expertise and passion for Iceland truly made the trip unforgettable. I learned so much and captured some amazing photos."</blockquote>
+                            </div>
+                            <div class="p-8 bg-[var(--background-color)] rounded-xl border border-[var(--border-color)]">
+                                <div class="flex items-center gap-4">
+                                    <img alt="Ethan Walker" class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/48x48/E2E8F0/475569?text=EW';"/>
+                                    <div>
+                                        <p class="font-semibold">Ethan Walker</p>
+                                        <div class="flex text-yellow-400 mt-1">
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                            <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <blockquote class="mt-4 italic text-[var(--text-secondary)]">"Elias is a fantastic guide and photographer. He knows all the best spots in Iceland and provides excellent guidance. Highly recommended!"</blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CTA Section -->
+                <section class="py-20 sm:py-24 px-4 sm:px-10 text-center">
+                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready for Your Icelandic Adventure?</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-[var(--text-secondary)]">Every journey begins with a conversation. Let's start yours with a free, no-pressure consultation to ensure this is the adventure you're looking for.</p>
+                    <button class="mt-8 flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-[var(--primary-color)] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-transform transform hover:scale-105">
+                        <span class="truncate">Schedule a Free Consultation</span>
+                    </button>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-[var(--card-background)] border-t border-[var(--border-color)]">
+                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-center space-x-6">
+                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#"><span class="sr-only">Instagram</span><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c-4.04.004-4.526.018-6.113.09-1.58.072-2.67.34-3.61.723a4.93 4.93 0 00-1.772 1.772c-.383.94-.65 2.03-.724 3.61C.018 7.788 0 8.265 0 12.315s.018 4.527.09 6.113c.073 1.58.34 2.67.724 3.61a4.93 4.93 0 001.772 1.772c.94.383 2.03.65 3.61.723 1.587.073 2.073.09 6.113.09s4.527-.017 6.113-.09c1.58-.073 2.67-.34 3.61-.723a4.93 4.93 0 001.772-1.772c.383-.94.65-2.03.723-3.61.073-1.586.09-2.073.09-6.113s-.017-4.527-.09-6.113c-.073-1.58-.34-2.67-.723-3.61a4.93 4.93 0 00-1.772-1.772c-.94-.383-2.03-.65-3.61-.723C16.842 2.018 16.358 2 12.315 2zM8.27 12a4.045 4.045 0 118.09 0 4.045 4.045 0 01-8.09 0zm8.995-5.237a1.425 1.425 0 11-2.85 0 1.425 1.425 0 012.85 0zM12 14.188a2.188 2.188 0 100-4.375 2.188 2.188 0 000 4.375z" fill-rule="evenodd"></path></svg></a>
+                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#"><span class="sr-only">Facebook</span><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#"><span class="sr-only">Twitter</span><svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+                    </div>
+                    <nav class="mt-8 flex flex-wrap justify-center -mx-5 -my-2">
+                        <div class="px-5 py-2"><a class="text-base text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#">Contact</a></div>
+                        <div class="px-5 py-2"><a class="text-base text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#">Privacy Policy</a></div>
+                        <div class="px-5 py-2"><a class="text-base text-[var(--text-secondary)] hover:text-[var(--primary-color)]" href="#">Terms of Service</a></div>
+                    </nav>
+                    <p class="mt-8 text-center text-base text-[var(--text-secondary)]">© 2024 Aurora Expeditions. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Get references to the DOM elements for the mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        // Add a click event listener to the menu button
+        mobileMenuButton.addEventListener('click', () => {
+            // Toggle the 'hidden' class on the mobile menu panel
+            mobileMenu.classList.toggle('hidden');
+            // Toggle the 'hidden' class on the open and close icons to switch between them
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
