@@ -1,3 +1,302 @@
 ---
-layout: home
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.page_title }}</title>
+    <meta name="description" content="{{ site.app_description }}">
+    
+    <!-- Open Graph / Facebook / iMessage -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url | default: 'https://yourwebsite.com/' }}">
+    <meta property="og:title" content="{{ site.page_title }}">
+    <meta property="og:description" content="{{ site.app_description }}">
+    <meta property="og:image" content="{{ site.url | default: 'https://yourwebsite.com' }}/assets/screenshot/IMG_6256.PNG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url | default: 'https://yourwebsite.com/' }}">
+    <meta property="twitter:title" content="{{ site.page_title }}">
+    <meta property="twitter:description" content="{{ site.app_description }}">
+    <meta property="twitter:image" content="{{ site.url | default: 'https://yourwebsite.com' }}/assets/screenshot/IMG_6256.PNG">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="{{ site.url | default: 'https://yourwebsite.com/' }}">
+
+    <!-- App Schema Markup (JSON-LD) for Rich Google Search Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "{{ site.app_name }}",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "HealthAndFitnessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "11.99",
+        "priceCurrency": "EUR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "256"
+      }
+    }
+    </script>
+
+    <link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
+    {% if site.ios_app_id %}
+    <meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+    {% endif %}
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white relative">
+
+    <!-- Ambient Background Gradients -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-cyan-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-indigo-500/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="{{ site.app_icon | relative_url }}" alt="{{ site.app_name }} Icon" class="w-10 h-10 rounded-xl shadow-lg shadow-brand-500/30">
+                <span class="font-bold text-xl tracking-tight text-white">{{ site.app_name | split: ' ' | first }}</span>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="/imprint/" class="hover:text-white transition-colors">Imprint</a>
+                <a href="/privacypolicy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                {% if site.presskit_download_link %}
+                <a href="{{ site.presskit_download_link }}" class="hover:text-white transition-colors flex items-center gap-1">
+                    Press Kit
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                </a>
+                {% endif %}
+            </nav>
+
+            <div class="md:hidden">
+                <button class="text-slate-300 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Hero Section -->
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <!-- Hero Text -->
+                <div class="flex-1 text-center lg:text-left">
+                    <img src="{{ site.app_icon | relative_url }}" alt="{{ site.app_name }} App Icon" class="w-20 h-20 rounded-2xl shadow-xl shadow-brand-500/20 mb-8 mx-auto lg:mx-0">
+                    
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-brand-400 text-sm font-medium mb-6 backdrop-blur-sm">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                        </span>
+                        {{ site.page_title | split: '-' | last | strip }}
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Don't just set goals. <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-400">Crush them.</span>
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        {{ site.app_description }}
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6">
+                        <!-- App Store Button -->
+                        {% if site.appstore_link %}
+                        <a href="{{ site.appstore_link }}" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-slate-900 px-6 py-3.5 rounded-xl font-semibold hover:bg-slate-100 transition-transform active:scale-95">
+                        {% else %}
+                        <a href="#" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-slate-900 px-6 py-3.5 rounded-xl font-semibold hover:bg-slate-100 transition-transform active:scale-95">
+                        {% endif %}
+                            <svg class="w-7 h-7" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                            <div class="text-left">
+                                <div class="text-[10px] uppercase tracking-wider leading-none mb-1 opacity-80">Download on the</div>
+                                <div class="text-lg leading-none">App Store</div>
+                            </div>
+                        </a>
+                        
+                        <!-- Play Store Button -->
+                        {% if site.playstore_link %}
+                        <a href="{{ site.playstore_link }}" class="w-full sm:w-auto flex items-center justify-center gap-3 glass-panel px-6 py-3.5 rounded-xl font-semibold hover:bg-slate-800 transition-transform active:scale-95 text-white">
+                            <svg class="w-7 h-7 text-brand-400" viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                            <div class="text-left">
+                                <div class="text-[10px] uppercase tracking-wider leading-none mb-1 text-slate-400">Get it on</div>
+                                <div class="text-lg leading-none">Google Play</div>
+                            </div>
+                        </a>
+                        {% endif %}
+                    </div>
+                    
+                    <p class="text-sm text-slate-500 font-medium">
+                        {{ site.app_price }}
+                    </p>
+                </div>
+
+                <!-- Hero Image / Phone Mockup -->
+                <div class="flex-1 relative w-full max-w-sm mx-auto lg:max-w-none flex justify-center lg:justify-end">
+                    <!-- Decorative glow behind phone -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[100%] bg-gradient-to-tr from-brand-500/20 to-cyan-500/20 blur-3xl rounded-full"></div>
+                    
+                    <!-- CSS iPhone Mockup -->
+                    <div class="relative w-[300px] h-[620px] bg-slate-900 border-[10px] border-slate-800 rounded-[3rem] shadow-2xl shadow-black/50 overflow-hidden ring-1 ring-white/10 animate-float z-10">
+                        <!-- Dynamic Island / Notch -->
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30 flex items-center justify-end px-2">
+                             <div class="w-2.5 h-2.5 rounded-full bg-slate-800/80 mr-1 border border-white/5"></div>
+                        </div>
+                        
+                        <!-- App Screenshot -->
+                        <img src="/assets/screenshot/IMG_6256.PNG" alt="{{ site.app_name }} App Screenshot" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="relative z-10 py-24 bg-slate-900/50 border-y border-slate-800/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Everything you need to succeed</h2>
+                <p class="text-slate-400 text-lg">Powerful features wrapped in a beautiful, intuitive interface.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for feature in site.features %}
+                {% assign colors = "brand,cyan,indigo,purple,pink,orange" | split: "," %}
+                {% assign color_index = forloop.index0 | modulo: 6 %}
+                {% assign current_color = colors[color_index] %}
+
+                <div class="glass-panel p-8 rounded-3xl hover:bg-slate-800/50 transition-colors duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-{{ current_color }}-500/10 text-{{ current_color }}-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-{{ current_color }}-500/20 transition-all">
+                        <i class="fas fa-{{ feature.fontawesome_icon_name }} text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">{{ feature.title }}</h3>
+                    <p class="text-slate-400 leading-relaxed">{{ feature.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            
+            <div class="flex gap-6 mb-8">
+                {% if site.instagram_username %}
+                <!-- Instagram -->
+                <a href="https://instagram.com/{{ site.instagram_username }}" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-brand-400 hover:bg-slate-700 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                {% endif %}
+                {% if site.github_username %}
+                <!-- Github -->
+                <a href="https://github.com/{{ site.github_username }}" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-brand-400 hover:bg-slate-700 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                {% endif %}
+            </div>
+
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-slate-500 mb-8">
+                <a href="/imprint/" class="hover:text-white transition-colors">Imprint</a>
+                <a href="/privacypolicy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                {% if site.presskit_download_link %}
+                <a href="{{ site.presskit_download_link }}" class="hover:text-white transition-colors">Press Kit</a>
+                {% endif %}
+            </nav>
+
+            <p class="text-slate-600 text-sm">
+                Made with <span class="text-brand-500">♥</span> by {{ site.your_name }} in {{ site.your_city }}.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
