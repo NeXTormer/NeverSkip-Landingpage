@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" font-family="Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: redesigned home screen, autumn 2021 (green era, event queue + achievements) -->
+  <rect width="390" height="844" fill="#F4F6F5"/>
+  <rect width="390" height="150" fill="#1CBB3F"/>
+  <text x="28" y="34" font-size="15" font-weight="600" fill="#fff">9:41</text>
+  <rect x="318" y="24" width="44" height="12" rx="3" fill="none" stroke="#fff" stroke-width="1.4"/>
+  <rect x="320" y="26" width="32" height="8" rx="1.5" fill="#fff"/>
+  <text x="24" y="92" font-size="15" fill="#E8FBEA">Hi Felix,</text>
+  <text x="24" y="122" font-size="24" font-weight="700" fill="#fff">Ready for today?</text>
+  <circle cx="340" cy="104" r="22" fill="#fff" opacity="0.25"/>
+  <text x="340" y="111" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">F</text>
+  <!-- achievement card -->
+  <rect x="16" y="130" width="358" height="118" rx="16" fill="#fff" stroke="#E2E2E2"/>
+  <text x="36" y="164" font-size="13" font-weight="700" fill="#1CBB3F" letter-spacing="1">ACHIEVEMENT</text>
+  <text x="36" y="194" font-size="20" font-weight="700" fill="#272727">4 weeks in a row</text>
+  <text x="36" y="220" font-size="14" fill="#888">You trained every week this month.</text>
+  <circle cx="322" cy="190" r="30" fill="#1CBB3F" opacity="0.12"/>
+  <path d="M322 170 l7 14 15 2 -11 10 3 15 -14 -8 -14 8 3 -15 -11 -10 15 -2z" fill="#1CBB3F"/>
+  <!-- upcoming -->
+  <text x="24" y="292" font-size="18" font-weight="700" fill="#272727">Upcoming workouts</text>
+  <g font-size="15">
+    <rect x="16" y="310" width="358" height="76" rx="14" fill="#fff" stroke="#E2E2E2"/>
+    <rect x="32" y="326" width="44" height="44" rx="10" fill="#1CBB3F" opacity="0.14"/>
+    <text x="54" y="354" text-anchor="middle" font-size="14" font-weight="700" fill="#1CBB3F">MON</text>
+    <text x="92" y="342" font-weight="700" fill="#272727">Push Day</text>
+    <text x="92" y="364" font-size="13" fill="#999">6 exercises · 55 min</text>
+    <text x="350" y="354" text-anchor="end" fill="#C4C4C4" font-size="22">›</text>
+
+    <rect x="16" y="398" width="358" height="76" rx="14" fill="#fff" stroke="#E2E2E2"/>
+    <rect x="32" y="414" width="44" height="44" rx="10" fill="#9370DB" opacity="0.14"/>
+    <text x="54" y="442" text-anchor="middle" font-size="14" font-weight="700" fill="#9370DB">WED</text>
+    <text x="92" y="430" font-weight="700" fill="#272727">Pull Day</text>
+    <text x="92" y="452" font-size="13" fill="#999">5 exercises · 50 min</text>
+    <text x="350" y="442" text-anchor="end" fill="#C4C4C4" font-size="22">›</text>
+
+    <rect x="16" y="486" width="358" height="76" rx="14" fill="#fff" stroke="#E2E2E2"/>
+    <rect x="32" y="502" width="44" height="44" rx="10" fill="#B71C1C" opacity="0.1"/>
+    <text x="54" y="530" text-anchor="middle" font-size="14" font-weight="700" fill="#B71C1C">FRI</text>
+    <text x="92" y="518" font-weight="700" fill="#272727">Leg Day</text>
+    <text x="92" y="540" font-size="13" fill="#999">5 exercises · 60 min</text>
+    <text x="350" y="530" text-anchor="end" fill="#C4C4C4" font-size="22">›</text>
+  </g>
+  <text x="24" y="606" font-size="18" font-weight="700" fill="#272727">This week</text>
+  <g>
+    <rect x="16" y="622" width="358" height="92" rx="14" fill="#fff" stroke="#E2E2E2"/>
+    <g font-size="12" fill="#999" text-anchor="middle">
+      <text x="50" y="700">M</text><text x="96" y="700">T</text><text x="142" y="700">W</text><text x="188" y="700">T</text><text x="234" y="700">F</text><text x="280" y="700">S</text><text x="326" y="700">S</text>
+    </g>
+    <rect x="38" y="642" width="24" height="40" rx="6" fill="#1CBB3F"/>
+    <rect x="84" y="662" width="24" height="20" rx="6" fill="#E2E2E2"/>
+    <rect x="130" y="648" width="24" height="34" rx="6" fill="#1CBB3F"/>
+    <rect x="176" y="662" width="24" height="20" rx="6" fill="#E2E2E2"/>
+    <rect x="222" y="662" width="24" height="20" rx="6" fill="#E2E2E2"/>
+    <rect x="268" y="662" width="24" height="20" rx="6" fill="#E2E2E2"/>
+    <rect x="314" y="662" width="24" height="20" rx="6" fill="#E2E2E2"/>
+  </g>
+  <!-- FAB -->
+  <circle cx="330" cy="742" r="28" fill="#1CBB3F"/>
+  <rect x="319" y="740" width="22" height="4" rx="2" fill="#fff"/><rect x="328" y="731" width="4" height="22" rx="2" fill="#fff"/>
+  <!-- bottom nav -->
+  <rect y="784" width="390" height="60" fill="#fff"/>
+  <rect y="784" width="390" height="1" fill="#E2E2E2"/>
+  <g font-size="11" text-anchor="middle">
+    <circle cx="58" cy="805" r="8" fill="#1CBB3F"/><text x="58" y="830" fill="#1CBB3F">Home</text>
+    <rect x="138" y="797" width="16" height="16" rx="3" fill="none" stroke="#A5A5A5" stroke-width="2"/><text x="146" y="830" fill="#A5A5A5">Calendar</text>
+    <rect x="236" y="801" width="16" height="8" rx="2" fill="#A5A5A5"/><text x="244" y="830" fill="#A5A5A5">Exercises</text>
+    <circle cx="332" cy="805" r="8" fill="none" stroke="#A5A5A5" stroke-width="2"/><text x="332" y="830" fill="#A5A5A5">Profile</text>
+  </g>
+</svg>

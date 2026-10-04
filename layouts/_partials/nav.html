@@ -1,0 +1,36 @@
+{{- /* On the home page the links jump within the page; elsewhere they lead back to it. */ -}}
+{{- $home := cond .IsHome "" ("/" | relURL) -}}
+<header class="nav" data-nav>
+  <div class="nav__inner wrap">
+    <a class="brand" href="{{ $home }}#top" aria-label="NeverSkip, back to top">
+      {{ partial "glyph.html" "ns-nav-cut" }}
+      <span class="brand__name">NeverSkip</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="{{ $home }}#features">Features</a>
+      <a href="{{ $home }}#apple">iPhone &amp; Watch</a>
+      <a data-v="nav.story" href="{{ $home }}#story">Story</a>
+      <a href="{{ $home }}#pricing">Pricing</a>
+      <a href="{{ $home }}#faq">FAQ</a>
+    </nav>
+    {{- if .IsHome }}
+    <div class="voice" data-voice-menu>
+      <button class="voice__button" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="voice-menu" data-voice-toggle>
+        <svg class="voice__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5z"/></svg>
+        <span class="voice__label"><span class="voice__prefix">Voice: </span><span data-voice-current>{{ (index site.Data.voices 0).name }}</span></span>
+        <svg class="voice__chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>
+      </button>
+      <div class="voice__menu" id="voice-menu" role="menu" aria-label="Page voice" hidden>
+        {{- range $i, $v := site.Data.voices }}
+        <button class="voice__option" type="button" role="menuitemradio" aria-checked="{{ eq $i 0 }}" data-voice-set="{{ $v.id }}">
+          <span class="voice__name">{{ $v.name }}{{ if $v.gate }} <span class="voice__tag">18+</span>{{ end }}</span>
+          <span class="voice__desc">{{ $v.desc }}</span>
+        </button>
+        {{- end }}
+        <p class="voice__note">Only the words on this page change.</p>
+      </div>
+    </div>
+    {{- end }}
+    <a data-v="nav.cta" class="nav__cta" href="{{ $home }}#pricing">Try it free</a>
+  </div>
+</header>

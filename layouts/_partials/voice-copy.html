@@ -1,0 +1,14 @@
+{{- /* Everything voice.js needs, as JSON. Neutral page copy is the HTML itself, so only the other
+   voices' strings are listed (data/voice/<id>.yaml). */ -}}
+{{- $voices := dict -}}
+{{- $moments := dict -}}
+{{- $page := dict -}}
+{{- range site.Data.voices -}}
+  {{- $id := .id -}}
+  {{- $voices = merge $voices (dict $id (dict "name" .name "desc" .desc "gate" (.gate | default false) "icon" (.icon | default "app-icon"))) -}}
+  {{- $lines := dict -}}
+  {{- range site.Data.moments }}{{ $lines = merge $lines (dict .id (index .text $id)) }}{{ end -}}
+  {{- $moments = merge $moments (dict $id $lines) -}}
+  {{- with index site.Data.voice $id }}{{ $page = merge $page (dict $id .) }}{{ end -}}
+{{- end }}
+<script type="application/json" id="voice-copy">{{ dict "voices" $voices "page" $page "moments" $moments | jsonify | safeJS }}</script>

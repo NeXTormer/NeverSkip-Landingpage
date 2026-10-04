@@ -1,0 +1,36 @@
+# In-app moments shown in the voice preview phone. One line per voice; these map to the app's SessionEvent copy.
+- id: today
+  label: "Today"
+  icon: "<path d=\"M4 6.5h12M6.5 3v3M13.5 3v3\"/><rect x=\"3.5\" y=\"5\" width=\"13\" height=\"11.5\" rx=\"2.5\"/>"
+  text:
+    neutral: "Push today: 6 exercises, about 55 minutes."
+    drill: "Push. Six exercises. Fifty-five minutes. Fall in."
+    devoted: "Today I’ve set Push for you. Six exercises."
+- id: rest
+  label: "Rest timer"
+  icon: "<circle cx=\"10\" cy=\"11\" r=\"6\"/><path d=\"M10 8v3l2 1.5M8 2.5h4\"/>"
+  text:
+    neutral: "Rest’s over. Set 3 of 4: 32.5 kg × 9."
+    drill: "Rest’s over. Set 3. 32.5 kg, nine reps. Move."
+    devoted: "Rest’s over. Your next task: 32.5 kg × 9. Show me."
+- id: record
+  label: "Personal record"
+  icon: "<path d=\"M10 3l2.1 4.3 4.7.7-3.4 3.3.8 4.7L10 13.8 5.8 16l.8-4.7L3.2 8l4.7-.7z\"/>"
+  text:
+    neutral: "New record: Bench Press, 85 kg × 5."
+    drill: "85 kg × 5 on the bench. New record. That’s how it’s done."
+    devoted: "85 kg × 5. A new record. Good. I knew you had it in you."
+- id: done
+  label: "Session finished"
+  icon: "<circle cx=\"10\" cy=\"10\" r=\"7\"/><path d=\"M6.8 10.2l2.2 2.2 4.2-4.6\"/>"
+  text:
+    neutral: "Push finished: 18 sets in 52 minutes."
+    drill: "Push complete. 18 sets, 52 minutes. Eat, sleep, report back."
+    devoted: "Push is done: 18 sets in 52 minutes. You did everything I asked. Rest now."
+- id: missed
+  label: "Yesterday"
+  icon: "<path d=\"M15.5 12.5A6.5 6.5 0 0 1 7.5 4.5a6.5 6.5 0 1 0 8 8z\"/>"
+  text:
+    neutral: "No session yesterday. Pull is next whenever you’re ready."
+    drill: "Yesterday was a rest day. Pull is next. Be ready."
+    devoted: "You missed yesterday, and that’s all right. Pull is waiting for you when you’re ready."

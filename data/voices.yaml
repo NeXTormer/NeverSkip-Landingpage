@@ -1,0 +1,13 @@
+# Page voices, in menu order. "gate: true" asks for adult confirmation before switching;
+# "icon" is the favicon set in static/brand/ (the app swaps to IconCollar in the devoted voice).
+- id: neutral
+  name: "Neutral"
+  desc: "Plain and factual. The default."
+- id: drill
+  name: "Drill"
+  desc: "Short, loud and direct, like a coach on the gym floor. Tough on the plan, never on you."
+- id: devoted
+  name: "Devoted"
+  desc: "Praise-forward. Frames each training day as a task set for you, with a dominant/submissive flavour. For adults, opt-in."
+  gate: true
+  icon: app-icon-collar

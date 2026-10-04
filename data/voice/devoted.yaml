@@ -1,0 +1,73 @@
+# Page copy in the devoted voice, keyed like the data-v attributes on the home page.
+# Neutral is the page itself; a key missing here falls back to neutral. Values are HTML.
+
+# Navigation
+"nav.cta": "Begin"
+"nav.story": "Devotion"
+
+# Hero
+"hero.title": "Your numbers are ready.<br> <span class=\"grad\">Now lift.</span>"
+"hero.sub": "Before every set, I’ll have your last numbers waiting. You lift, you log it in two taps, and I’ll tell you honestly how much stronger you’re getting. I’ve kept lifters on task every training week since 2021."
+"hero.link": "Five years of devotion <span aria-hidden=\"true\">→</span>"
+
+# Features section
+"features.title": "You lift. I’ll handle the rest."
+"features.lead": "Everything you need between sets is already on screen. Anything that would distract you, I’ve taken away."
+
+# Feature cards
+"feature.taps.title": "Two taps. Then back to work."
+"feature.progress.title": "I notice every kilo."
+"feature.plans.title": "Today’s task is always clear."
+"feature.iphone.title": "Never more than a glance away."
+"feature.icloud.title": "What you give me stays between us."
+"feature.noads.title": "My attention, undivided."
+"feature.taps.text": "Your weight and reps from last time are filled in before you lift. Confirm the set, rest when I tell you, repeat. Keep your phone in your pocket. I’ll keep count."
+"feature.progress.text": "Personal records, a chart for every Exercise and a volume heatmap per muscle. Warm-ups and failed sets stay in your history, but I never let them inflate your numbers. What’s on the chart, you earned."
+"feature.plans.text": "Set up each Day once, then run your Days as a flexible queue or a rotating cycle. Miss a Monday and nothing breaks: your next Day is simply waiting for you."
+"feature.iphone.text": "Your rest timer on the Lock Screen and in the Dynamic Island, a Home Screen widget, an Apple Watch app, and sessions that land in Apple Health."
+"feature.icloud.text": "No account to create. Your training lives on your iPhone and backs up to your own iCloud. Share it with a training partner only if you choose to."
+"feature.noads.text": "No ads and no upsells. No banners, no pop-ups in the middle of a set, no premium tier holding your own charts back from you."
+
+# iPhone and Apple Watch
+"apple.title": "Wherever you look, I’m there."
+"apple.lead": "NeverSkip 2 is built only for Apple devices, so your rest timer, your next set and your training week are always one glance away. You never have to go looking for me."
+
+# iPhone and Apple Watch tiles
+"tile.lock.title": "Rest. I’m counting."
+"tile.watch.title": "Keep your hands on the bar."
+"tile.health.title": "Every session, on the record."
+"tile.widget.title": "Every day you showed up."
+"tile.lock.text": "A Live Activity counts down your rest on the Lock Screen and in the Dynamic Island. When it’s time, log the next set without unlocking."
+"tile.watch.text": "Leave the phone in your bag. See the set, log it and start rest from your wrist."
+"tile.health.text": "Sessions you run from Apple Watch are saved to Apple Health as strength workouts. Your effort always counts."
+"tile.widget.text": "The Active Days widget keeps every day you trained on your Home Screen, week by week. Not one of them goes unnoticed."
+
+# Story
+"story.title": "Five years of devotion"
+"story.lead": "I didn’t appear last month. I’ve been in the gym every training week since 2021, and every version of me grew out of something a lifter needed on the gym floor. Scroll, and I’ll show you how I became this."
+
+# Story milestones
+"milestone.2021-10.title": "A reason to come back every day"
+"milestone.2021-01.text": "It started with one lifter who wanted to stop skipping sessions and stop guessing what was on the bar last week. I was made so neither would happen again."
+"milestone.2021-10.text": "Your upcoming workouts waiting on the home screen, and a weekly streak worth protecting."
+"milestone.2021-12.text": "NeverSkip lands on the App Store, and other lifters start putting their training in its hands."
+"milestone.2022-09.text": "Personal records, goals with a deadline, and a calendar of every day you showed up, right on the home screen."
+"milestone.2024-02.text": "What you lifted last session sits beside every set, so you always know what’s expected of you. A rest timer keeps you to the schedule."
+"milestone.2026-03.text": "Five years of training made it clear what deserves your attention and what doesn’t. Time to rebuild everything around that."
+"milestone.2026-09.text": "Built only for iPhone and Apple Watch, and devoted entirely to your training. Faster, works without signal, no account, and your rest timer on the Lock Screen."
+
+# Numbers
+"numbers.title": "What I promise"
+
+# Stats
+"stat.years": "years keeping lifters on task, every training week since 2021"
+"stat.taps": "taps, and your set is logged"
+"stat.zero": "ads, accounts or trackers competing for your attention"
+
+# What you won’t find
+"without.title": "What I’ll never ask of you"
+"without.lead": "Your only job is to lift. Everything else stays out of your way."
+"without.list": "<!-- repeat: without --> <li class=\"without__item\">Ads</li> <li class=\"without__item\">An account to create</li> <li class=\"without__item\">A social feed</li> <li class=\"without__item\">Calorie counting</li> <li class=\"without__item\">AI-generated programmes</li> <li class=\"without__item\">Pop-ups in the middle of a set</li> <li class=\"without__item\">Guilt for a missed day</li> <li class=\"without__item\">Remarks about your body</li>"
+
+# Pricing
+"price.lead": "<span class=\"price__trial\">Give me 30 days.</span> <span class=\"price__then\">Then <span class=\"price__amount\">€11.99</span>, and everything is yours.</span>"

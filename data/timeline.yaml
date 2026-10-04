@@ -1,0 +1,79 @@
+# The story, oldest first. "shots" fill the sticky phone on desktop; a milestone without shots shows a card.
+# accent tints the scene while the milestone is active. Voice variants: milestone.<id>.title/text.
+- id: "2021-01"
+  label: "Jan 2021"
+  year: 2021
+  month: "Jan"
+  accent: "#1CBB3F"
+  title: "Day one"
+  text: "NeverSkip started as a personal project: a lifter who wanted to stop skipping sessions and stop guessing what was on the bar last week."
+  confirm: true
+  shots:
+    - device: phone
+      src: "images/mocks/2021-01-login.svg"
+      alt: "The first NeverSkip, January 2021 (mock)"
+- id: "2021-10"
+  label: "Oct 2021"
+  year: 2021
+  month: "Oct"
+  accent: "#1CBB3F"
+  title: "A reason to open it every day"
+  text: "Upcoming workouts on the home screen and a weekly streak worth protecting."
+  shots:
+    - device: phone
+      src: "images/mocks/2021-10-home.svg"
+      alt: "NeverSkip home screen with upcoming workouts, October 2021 (mock)"
+- id: "2021-12"
+  label: "Dec 2021"
+  year: 2021
+  month: "Dec"
+  accent: "#1CBB3F"
+  title: "Out in the world"
+  text: "NeverSkip lands on the App Store, and other lifters start training with it."
+- id: "2022-09"
+  label: "Sep 2022"
+  year: 2022
+  month: "Sep"
+  accent: "#3F51D8"
+  title: "Version 1.0: records and goals"
+  text: "Personal records, goals with a deadline and a calendar of every day you trained, right on the home screen."
+  shots:
+    - device: phone
+      src: "images/mocks/2022-09-v1-home.svg"
+      alt: "NeverSkip 1.0 home screen with records, goals and active days, September 2022 (mock)"
+- id: "2024-02"
+  label: "Feb 2024"
+  year: 2024
+  month: "Feb"
+  accent: "#3F51D8"
+  title: "Last time, next to every set"
+  text: "What you lifted last session sits beside every set, and a rest timer follows you through the workout."
+  shots:
+    - device: phone
+      src: "images/mocks/2024-02-v1-workout.svg"
+      alt: "NeverSkip workout screen with previous numbers and rest timer, February 2024 (mock)"
+- id: "2026-03"
+  label: "Mar 2026"
+  year: 2026
+  month: "Mar"
+  accent: "#4A5EE6"
+  title: "Starting over, on purpose"
+  text: "Five years of training with it made it clear what matters and what just gets in the way. Time to rebuild it around that."
+  confirm: true
+- id: "2026-09"
+  label: "Sep 2026"
+  year: 2026
+  month: "Sep"
+  accent: "#3C6AF0"
+  title: "NeverSkip 2"
+  text: "Built only for iPhone and Apple Watch. Faster, works without signal, no account, and your rest timer on the Lock Screen."
+  shots:
+    - device: phone
+      src: "images/mocks/2026-v2-home.svg"
+      alt: "NeverSkip 2 home screen, September 2026 (mock)"
+    - device: phone
+      src: "images/mocks/2026-v2-player.svg"
+      alt: "NeverSkip 2 workout player, September 2026 (mock)"
+    - device: watch
+      src: "images/mocks/2026-watch.svg"
+      alt: "NeverSkip 2 on Apple Watch, September 2026 (mock)"

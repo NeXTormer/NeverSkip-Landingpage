@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: v1.0 home, September 2022 (records, goals, active days) -->
+  <rect width="390" height="844" fill="#ffffff"/>
+  <text x="28" y="34" font-size="15" font-weight="600" fill="#111">9:41</text>
+  <rect x="318" y="24" width="44" height="12" rx="3" fill="none" stroke="#111" stroke-width="1.4"/>
+  <rect x="320" y="26" width="32" height="8" rx="1.5" fill="#111"/>
+  <!-- header -->
+  <circle cx="46" cy="84" r="22" fill="#DDE3FB"/>
+  <text x="46" y="91" text-anchor="middle" font-size="18" font-weight="700" fill="#3F51D8">F</text>
+  <text x="330" y="92" text-anchor="end" font-size="18" fill="#333">12</text>
+  <path d="M352 72 c10 8 12 16 6 24 c-4 5 -14 5 -17 -2 c-2 -5 1 -9 4 -12 c0 4 2 6 4 6 c0 -6 -1 -11 3 -16z" fill="none" stroke="#3F51D8" stroke-width="2.4"/>
+  <text x="24" y="140" font-size="15" fill="#333">Good afternoon, Felix!</text>
+  <text x="24" y="172" font-size="22" font-weight="500" fill="#111">Let's find you a Workout!</text>
+  <rect y="192" width="390" height="1" fill="#D8D8D8"/>
+  <!-- PRs -->
+  <text x="24" y="226" font-size="17" font-weight="600" fill="#111">Personal Records</text>
+  <text x="356" y="228" text-anchor="end" font-size="24" fill="#AAA">+</text>
+  <rect x="20" y="242" width="220" height="74" rx="14" fill="#fff" stroke="#E0E0E0" stroke-width="1.4"/>
+  <rect x="34" y="256" width="46" height="46" rx="10" fill="#EEF0FD"/>
+  <rect x="44" y="275" width="26" height="8" rx="3" fill="#3F51D8"/>
+  <text x="92" y="274" font-size="12" fill="#666">Bench press</text>
+  <text x="92" y="299" font-size="19" font-weight="600" fill="#111">85 <tspan font-size="14" font-weight="500">kg</tspan></text>
+  <rect x="252" y="242" width="160" height="74" rx="14" fill="#fff" stroke="#E0E0E0" stroke-width="1.4"/>
+  <rect x="266" y="256" width="46" height="46" rx="10" fill="#EEF0FD"/>
+  <rect x="276" y="275" width="26" height="8" rx="3" fill="#3F51D8"/>
+  <text x="324" y="274" font-size="12" fill="#666">Deadlift</text>
+  <text x="324" y="299" font-size="19" font-weight="600" fill="#111">140 <tspan font-size="14" font-weight="500">kg</tspan></text>
+  <!-- goals -->
+  <text x="24" y="354" font-size="17" font-weight="600" fill="#111">My Goals</text>
+  <text x="356" y="356" text-anchor="end" font-size="24" fill="#AAA">+</text>
+  <rect x="20" y="370" width="270" height="88" rx="14" fill="#fff" stroke="#E0E0E0" stroke-width="1.4"/>
+  <rect x="34" y="386" width="54" height="56" rx="10" fill="#EEF0FD"/>
+  <circle cx="61" cy="402" r="5" fill="#3F51D8"/><rect x="45" y="412" width="32" height="4" rx="2" fill="#3F51D8"/><rect x="58" y="416" width="6" height="16" rx="2" fill="#3F51D8"/>
+  <text x="100" y="400" font-size="13" fill="#666">Squat</text>
+  <rect x="222" y="386" width="56" height="20" rx="10" fill="#4B7BEC"/>
+  <text x="250" y="400" text-anchor="middle" font-size="11" fill="#fff">7 days</text>
+  <text x="100" y="424" font-size="14" font-weight="600" fill="#111">100</text>
+  <text x="276" y="424" text-anchor="end" font-size="14" font-weight="600" fill="#111">120</text>
+  <rect x="100" y="436" width="176" height="6" rx="3" fill="#EEF0FD"/>
+  <rect x="100" y="436" width="118" height="6" rx="3" fill="#3F51D8"/>
+  <!-- active days -->
+  <text x="24" y="498" font-size="17" font-weight="600" fill="#111">Active days</text>
+  <rect x="20" y="512" width="350" height="208" rx="14" fill="#fff" stroke="#E0E0E0" stroke-width="1.4"/>
+  <g font-size="11" fill="#777">
+    <text x="84" y="536">July</text><text x="170" y="536">August</text><text x="276" y="536">Sept</text>
+    <text x="34" y="560">Mon</text><text x="34" y="584">Tue</text><text x="34" y="608">Wed</text><text x="34" y="632">Thu</text><text x="34" y="656">Fri</text><text x="34" y="680">Sat</text><text x="34" y="704">Sun</text>
+  </g>
+  <g id="grid">
+    <!-- 11 columns x 7 rows, 20px cells at 24px pitch -->
+    <g fill="#EDEDED">
+      <rect x="84" y="546" width="20" height="20" rx="5"/><rect x="108" y="546" width="20" height="20" rx="5"/><rect x="132" y="546" width="20" height="20" rx="5"/><rect x="156" y="546" width="20" height="20" rx="5"/><rect x="180" y="546" width="20" height="20" rx="5"/><rect x="204" y="546" width="20" height="20" rx="5"/><rect x="228" y="546" width="20" height="20" rx="5"/><rect x="252" y="546" width="20" height="20" rx="5"/><rect x="276" y="546" width="20" height="20" rx="5"/><rect x="300" y="546" width="20" height="20" rx="5"/><rect x="324" y="546" width="20" height="20" rx="5"/>
+      <rect x="84" y="570" width="20" height="20" rx="5"/><rect x="108" y="570" width="20" height="20" rx="5"/><rect x="132" y="570" width="20" height="20" rx="5"/><rect x="156" y="570" width="20" height="20" rx="5"/><rect x="180" y="570" width="20" height="20" rx="5"/><rect x="204" y="570" width="20" height="20" rx="5"/><rect x="228" y="570" width="20" height="20" rx="5"/><rect x="252" y="570" width="20" height="20" rx="5"/><rect x="276" y="570" width="20" height="20" rx="5"/><rect x="300" y="570" width="20" height="20" rx="5"/><rect x="324" y="570" width="20" height="20" rx="5"/>
+      <rect x="84" y="594" width="20" height="20" rx="5"/><rect x="108" y="594" width="20" height="20" rx="5"/><rect x="132" y="594" width="20" height="20" rx="5"/><rect x="156" y="594" width="20" height="20" rx="5"/><rect x="180" y="594" width="20" height="20" rx="5"/><rect x="204" y="594" width="20" height="20" rx="5"/><rect x="228" y="594" width="20" height="20" rx="5"/><rect x="252" y="594" width="20" height="20" rx="5"/><rect x="276" y="594" width="20" height="20" rx="5"/><rect x="300" y="594" width="20" height="20" rx="5"/><rect x="324" y="594" width="20" height="20" rx="5"/>
+      <rect x="84" y="618" width="20" height="20" rx="5"/><rect x="108" y="618" width="20" height="20" rx="5"/><rect x="132" y="618" width="20" height="20" rx="5"/><rect x="156" y="618" width="20" height="20" rx="5"/><rect x="180" y="618" width="20" height="20" rx="5"/><rect x="204" y="618" width="20" height="20" rx="5"/><rect x="228" y="618" width="20" height="20" rx="5"/><rect x="252" y="618" width="20" height="20" rx="5"/><rect x="276" y="618" width="20" height="20" rx="5"/><rect x="300" y="618" width="20" height="20" rx="5"/><rect x="324" y="618" width="20" height="20" rx="5"/>
+      <rect x="84" y="642" width="20" height="20" rx="5"/><rect x="108" y="642" width="20" height="20" rx="5"/><rect x="132" y="642" width="20" height="20" rx="5"/><rect x="156" y="642" width="20" height="20" rx="5"/><rect x="180" y="642" width="20" height="20" rx="5"/><rect x="204" y="642" width="20" height="20" rx="5"/><rect x="228" y="642" width="20" height="20" rx="5"/><rect x="252" y="642" width="20" height="20" rx="5"/><rect x="276" y="642" width="20" height="20" rx="5"/><rect x="300" y="642" width="20" height="20" rx="5"/><rect x="324" y="642" width="20" height="20" rx="5"/>
+      <rect x="84" y="666" width="20" height="20" rx="5"/><rect x="108" y="666" width="20" height="20" rx="5"/><rect x="132" y="666" width="20" height="20" rx="5"/><rect x="156" y="666" width="20" height="20" rx="5"/><rect x="180" y="666" width="20" height="20" rx="5"/><rect x="204" y="666" width="20" height="20" rx="5"/><rect x="228" y="666" width="20" height="20" rx="5"/><rect x="252" y="666" width="20" height="20" rx="5"/><rect x="276" y="666" width="20" height="20" rx="5"/><rect x="300" y="666" width="20" height="20" rx="5"/><rect x="324" y="666" width="20" height="20" rx="5"/>
+      <rect x="84" y="690" width="20" height="20" rx="5"/><rect x="108" y="690" width="20" height="20" rx="5"/><rect x="132" y="690" width="20" height="20" rx="5"/><rect x="156" y="690" width="20" height="20" rx="5"/><rect x="180" y="690" width="20" height="20" rx="5"/><rect x="204" y="690" width="20" height="20" rx="5"/><rect x="228" y="690" width="20" height="20" rx="5"/><rect x="252" y="690" width="20" height="20" rx="5"/><rect x="276" y="690" width="20" height="20" rx="5"/><rect x="300" y="690" width="20" height="20" rx="5"/><rect x="324" y="690" width="20" height="20" rx="5"/>
+    </g>
+    <g fill="#4B7BEC">
+      <rect x="84" y="546" width="20" height="20" rx="5"/><rect x="84" y="594" width="20" height="20" rx="5"/><rect x="108" y="570" width="20" height="20" rx="5"/><rect x="108" y="642" width="20" height="20" rx="5"/><rect x="132" y="546" width="20" height="20" rx="5"/><rect x="132" y="618" width="20" height="20" rx="5"/><rect x="156" y="594" width="20" height="20" rx="5"/><rect x="156" y="666" width="20" height="20" rx="5"/><rect x="180" y="546" width="20" height="20" rx="5"/><rect x="180" y="642" width="20" height="20" rx="5"/><rect x="204" y="570" width="20" height="20" rx="5"/><rect x="204" y="618" width="20" height="20" rx="5"/><rect x="228" y="546" width="20" height="20" rx="5"/><rect x="228" y="594" width="20" height="20" rx="5"/><rect x="228" y="690" width="20" height="20" rx="5"/><rect x="252" y="570" width="20" height="20" rx="5"/><rect x="252" y="642" width="20" height="20" rx="5"/><rect x="276" y="546" width="20" height="20" rx="5"/><rect x="276" y="594" width="20" height="20" rx="5"/><rect x="276" y="666" width="20" height="20" rx="5"/><rect x="300" y="570" width="20" height="20" rx="5"/><rect x="300" y="618" width="20" height="20" rx="5"/><rect x="324" y="546" width="20" height="20" rx="5"/>
+    </g>
+  </g>
+  <!-- progress teaser -->
+  <text x="24" y="752" font-size="17" font-weight="600" fill="#111">Progress</text>
+  <path d="M20 800 C80 790 110 770 150 780 S230 760 270 770 S340 750 370 758" fill="none" stroke="#4B7BEC" stroke-width="3"/>
+  <!-- tab bar -->
+  <rect y="770" width="390" height="74" fill="#fff"/>
+  <rect y="770" width="390" height="1" fill="#EEE"/>
+  <g font-size="12" text-anchor="middle">
+    <circle cx="56" cy="792" r="9" fill="none" stroke="#4B7BEC" stroke-width="2"/><text x="56" y="818" fill="#4B7BEC">Home</text>
+    <rect x="137" y="783" width="18" height="18" rx="4" fill="none" stroke="#3F51D8" stroke-width="2"/><text x="146" y="818" fill="#3F51D8">Calendar</text>
+    <rect x="232" y="788" width="24" height="8" rx="3" fill="#3F51D8"/><text x="244" y="818" fill="#3F51D8">Exercises</text>
+    <path d="M324 800 l6 -8 6 4 6 -10" fill="none" stroke="#3F51D8" stroke-width="2"/><text x="334" y="818" fill="#3F51D8">Workouts</text>
+  </g>
+  <rect x="128" y="832" width="134" height="5" rx="2.5" fill="#111"/>
+</svg>

@@ -1,0 +1,12 @@
+{{- /* Legal and info pages written in Markdown (content/*.md), inside the site's own nav and footer. */ -}}
+{{ define "main" }}
+    <article class="legal wrap">
+      <header class="legal__head">
+        <p class="eyebrow">NeverSkip</p>
+        <h1 class="legal__title">{{ .Title }}</h1>
+      </header>
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </article>
+{{ end }}

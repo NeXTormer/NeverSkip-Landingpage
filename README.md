@@ -1,115 +1,51 @@
-[neverskipfitness.com](https://neverskipfitness.com/)
+# neverskipfitness.com
 
-# Automatic App Landing Page
-**Create and deploy an iOS app landing page on GitHub Pages in only five minutes.**
+The NeverSkip landing page, built with [Hugo](https://gohugo.io) and deployed to GitHub Pages by
+`.github/workflows/deploy.yml`.
 
-Designed for GitHub Pages for super easy set up. 
+```bash
+hugo server            # http://localhost:1313, live reload
+hugo --gc --minify     # production build into public/
+```
 
-🔧 Fork this repo
+Use Hugo 0.152.2 (the version the workflow pins) or newer.
 
-🗝 Enter iOS App ID in `_config.yml`
+## Where things live
 
-📲 Upload video preview or screenshot
+| Change | Edit |
+|---|---|
+| Hero, section headings, the note, pricing text | `layouts/home.html` (written in the neutral voice) |
+| Feature cards, story milestones, stats, FAQ | `data/features.yaml`, `timeline.yaml`, `stats.yaml`, `faq.yaml` |
+| The Drill and Devoted page copy | `data/voice/drill.yaml`, `data/voice/devoted.yaml` |
+| Voice names, descriptions, the 18+ gate, voice icons | `data/voices.yaml` |
+| The in-app moments in the voice preview | `data/moments.yaml` |
+| Imprint and privacy policy | `content/imprint.md`, `content/privacypolicy.md` |
+| Styles and behaviour | `assets/css/main.css`, `assets/js/script.js`, `assets/js/voice.js` |
+| Fonts (self-hosted Inter and Inter Tight, SIL OFL) | `static/fonts/` |
+| Mock screenshots, app icons, the plate glyph | `static/images/mocks/`, `static/brand/` |
+| App Store ID and link, author link | `hugo.toml` → `[params]` |
 
-🎨 Customise site in `_config.yml` (no HTML/CSS)
+### How the voices work
 
-📝 Write Privacy Policy as markdown in `privacypolicy.md`
+The page ships in the neutral voice. Every element that a voice can rewrite carries `data-v="key"`.
+Each voice file lists only the keys whose text differs, and a missing key falls back to neutral. Keys for
+repeated items use the item's `id`, e.g. `feature.taps.title` or `milestone.2026-09.text`, so reordering
+a data file never mixes up the copy. `voice.js` reads the voices from the JSON block at the end of the page,
+remembers the visitor's choice in the browser only, and asks for adult confirmation before switching to
+any voice marked `gate: true`. The note and FAQ stay neutral in every voice on purpose.
 
-🕒 Keep a changelog in `CHANGELOG.md`
+## Deployment
 
-✅ Site becomes live at GitHub Pages repository URL, e.g. `https://your-username.github.io/your-repo-name/`.
+Every push to `master` builds and deploys. Pull requests build only.
 
-<img src="https://emilbaehr.com/files/jayson1.png" width="440"> <img src="https://emilbaehr.com/files/slor1.png" width="440">
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Until that is
+switched, GitHub keeps trying to build the repository as a Jekyll site.
 
+## Before launch
 
+- `content/privacypolicy.md`: check the items marked `confirm` in its front matter (the NeverSkip 1 section, GitHub's Data Privacy Framework status).
+- `hugo.toml`: `appStoreID` and `appStoreURL` point at the NeverSkip 1 listing. Confirm v2 ships under it.
+- The screenshots in `static/images/mocks/` are mocks; replace them with real ones.
+- Items marked `confirm` in `data/*.yaml` and `layouts/home.html` are wording to check.
 
-
-## Quick Start
-
-### Step 1: Fork this repo.
-After forking the repo, your site will be live immediately on your personal Github Pages account, e.g. `https://yourusername.github.io/your-repo-name/`.
-
-*Make sure GitHub Pages is enabled for your repo. It might take some time for the site to propagate entirely.*
-
-
-
-### Step 2: Enter iOS App ID in `_config.yml`
-Enter your iOS app ID in the `ios_app_id` field and commit your changes. Your site will automatically rebuild with your app icon, name, price and link to App Store.
-
-You can go on with customising almost anything in the `_config.yml` file. 
-
-Things you can customise in `_config.yml`:
-- App Name
-- App Icon
-- App Description
-- App Price
-- App Store Link
-- Play Store Link
-- Press Kit Download Link
-- Cover Image
-- Cover Overlay Color
-- Background Color
-- Text Colors
-- iPhone Device Color
-- Your Name / Company Name
-- Link to Website
-- Social Links and Contact Info
-- Feature List (Title, text, icon)
-
-
-
-### Step 3: Add screenshot or video
-
-#### Adding a screenshot
-Upload a `.png` or `.jpg` of your app to the folder `assets/screenshot/`. The name does not matter. Be sure to delete the placeholder `yourscreenshot.png`.
-
-#### Adding video
-Upload your video to the folder `assets/videos/`. To have support for most browsers, you need to upload two files – one for Safari and one for Chrome/Firefox.
-
-Video formats supported by Chrome and Firefox:
-- `.webm`
-- `.ogg`
-
-Video formats supported by Safari:
-- `.mp4`
-- `.mov`
-
-#### Resolutions
-The videos and screenshots must have one of the following resolutions:
-- 828x1792
-- 1125x2436
-- 1242x2688
-
-
-
-### Step 4: Edit (or remove) Privacy Policy and Changelog
-Your site automatically includes pages for a Privacy Policy and a Changelog. Change the content of these pages by editing the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-In each of the markdown files, you can set the `include_in_header:` value to either `true` or `false`. This determines if the page is included in the top navigation.
-By default, only the Changelog is included in the top navigation. The title of the navigation item can also be edited, by editing the `title:` in each markdown file.
-
-If you need to, you can create additional markdown based pages just by creating an `.md` file like the `privacypolicy.md` and `CHANGELOG.md` files in the `_pages` directory.
-
-**Please note:** The Privacy Policy and Changelog provided are written using dummy text, so please adapt each of them for your own app.
-You can also choose not to include these pages, by simple deleting the `privacypolicy.md` and `CHANGELOG.md` files.
-
-
-
-
-## Feedback
-If you have feedback regarding bugs or improvements, open an issue, @ me on Twitter or write me an email. You can find my contact info on my website.
-
-I'd love to see the sites you create using this little tool.
-
-## Credits
-- [Jekyll](https://github.com/jekyll/jekyll)
-- [FontAwesome](https://fontawesome.github.io/Font-Awesome/)
-
-## Donations
-[Donations are welcome](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S8ZZT3JXJPN92&currency_code=USD&source=url)
-
-## Author
-[Emil Baehr](https://emilbaehr.com/)
-
-## License
-[MIT License](LICENSE)
+The site makes no third-party requests (no CDN, no Google Fonts); keep it that way, or update the privacy policy.

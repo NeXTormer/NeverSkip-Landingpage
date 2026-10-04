@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="footer__brand">
+      {{ partial "glyph.html" "ns-footer-cut" }}
+      <span>NeverSkip</span> <span class="footer__sep" aria-hidden="true">·</span> <span class="footer__copy">© {{ site.Params.since }}–{{ now.Year }} <a href="{{ site.Params.authorURL }}">{{ site.Params.author }}</a></span>
+    </p>
+    <div class="theme" role="radiogroup" aria-label="Appearance" data-theme-switch>
+      <button class="theme__option" type="button" role="radio" aria-checked="true" data-theme-set="system" title="Match your device">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M8 2.5v11" /><path d="M8 2.5a5.5 5.5 0 0 1 0 11z" fill="currentColor"/></svg>Auto
+      </button>
+      <button class="theme__option" type="button" role="radio" aria-checked="false" data-theme-set="light" tabindex="-1">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1"/></svg>Light
+      </button>
+      <button class="theme__option" type="button" role="radio" aria-checked="false" data-theme-set="dark" tabindex="-1">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.2 9.8A5.6 5.6 0 0 1 6.2 2.8a5.6 5.6 0 1 0 7 7z"/></svg>Dark
+      </button>
+    </div>
+    <nav class="footer__links" aria-label="Legal and contact">
+      <a href="{{ "privacypolicy/" | relURL }}">Privacy</a>
+      <a href="{{ "imprint/" | relURL }}">Imprint</a>
+    </nav>
+  </div>
+</footer>

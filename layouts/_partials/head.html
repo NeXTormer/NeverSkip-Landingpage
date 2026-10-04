@@ -1,0 +1,38 @@
+{{- $title := cond .IsHome "NeverSkip — Strength training log" (printf "%s · NeverSkip" .Title) -}}
+{{- $description := .Params.description | default site.Params.description -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#05070F" media="(prefers-color-scheme: dark)" data-theme-color="dark">
+<meta name="theme-color" content="#F3F5FB" media="(prefers-color-scheme: light)" data-theme-color="light">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:image" content="{{ "brand/app-icon.png" | absURL }}">
+<meta name="twitter:card" content="summary">
+{{- if and .IsHome site.Params.appStoreID }}
+<meta name="apple-itunes-app" content="app-id={{ site.Params.appStoreID }}">
+{{- end }}
+<script>
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  // A light/dark choice from the footer switch applies before first paint; without one, the system decides.
+  try { var t = localStorage.getItem('ns.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="preload" href="{{ "fonts/inter-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/inter-tight-latin.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- /* voice.js swaps these to the collar icon in the Devoted voice, as the app does. */}}
+<link rel="icon" type="image/png" sizes="64x64" href="{{ "brand/app-icon-favicon-64.png" | relURL }}" id="favicon-64">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "brand/app-icon-favicon-32.png" | relURL }}" id="favicon-32">
+<link rel="apple-touch-icon" href="{{ "brand/app-icon-apple-touch.png" | relURL }}" id="touch-icon">
+{{- if .IsHome }}
+{{- $voice := resources.Get "js/voice.js" | minify | fingerprint }}
+<script src="{{ $voice.RelPermalink }}" integrity="{{ $voice.Data.Integrity }}" defer></script>
+{{- end }}
+{{- $script := resources.Get "js/script.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>

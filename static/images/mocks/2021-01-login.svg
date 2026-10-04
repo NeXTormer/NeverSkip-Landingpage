@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" font-family="Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: first login screen, January 2021 (Flutter + Firebase, green era) -->
+  <rect width="390" height="844" fill="#ffffff"/>
+  <!-- status bar -->
+  <text x="28" y="34" font-size="15" font-weight="600" fill="#111">9:41</text>
+  <rect x="318" y="24" width="44" height="12" rx="3" fill="none" stroke="#111" stroke-width="1.4"/>
+  <rect x="320" y="26" width="32" height="8" rx="1.5" fill="#111"/>
+  <!-- logo -->
+  <circle cx="195" cy="190" r="54" fill="#1CBB3F"/>
+  <g fill="#fff">
+    <rect x="163" y="184" width="64" height="12" rx="4"/>
+    <rect x="160" y="166" width="12" height="48" rx="4"/>
+    <rect x="218" y="166" width="12" height="48" rx="4"/>
+  </g>
+  <text x="195" y="290" text-anchor="middle" font-size="34" font-weight="700" fill="#1CBB3F">NeverSkip</text>
+  <text x="195" y="318" text-anchor="middle" font-size="15" fill="#888">Welcome back! Please log in.</text>
+  <!-- fields -->
+  <text x="40" y="386" font-size="13" fill="#1CBB3F">Email</text>
+  <text x="40" y="414" font-size="17" fill="#222">felix@example.com</text>
+  <rect x="40" y="426" width="310" height="2" fill="#1CBB3F"/>
+  <text x="40" y="474" font-size="13" fill="#999">Password</text>
+  <text x="40" y="502" font-size="17" fill="#222" letter-spacing="3">••••••••••</text>
+  <rect x="40" y="514" width="310" height="1" fill="#C4C4C4"/>
+  <text x="350" y="546" text-anchor="end" font-size="13" fill="#1CBB3F">Forgot password?</text>
+  <!-- button -->
+  <rect x="40" y="580" width="310" height="52" rx="26" fill="#1CBB3F"/>
+  <text x="195" y="612" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" letter-spacing="1.5">LOGIN</text>
+  <rect x="40" y="664" width="130" height="1" fill="#E2E2E2"/>
+  <text x="195" y="669" text-anchor="middle" font-size="13" fill="#999">or</text>
+  <rect x="220" y="664" width="130" height="1" fill="#E2E2E2"/>
+  <rect x="40" y="696" width="310" height="52" rx="26" fill="#fff" stroke="#C9C9C9"/>
+  <circle cx="92" cy="722" r="10" fill="none" stroke="#DB4437" stroke-width="4"/>
+  <text x="205" y="728" text-anchor="middle" font-size="15" fill="#444">Continue with Google</text>
+  <text x="195" y="800" text-anchor="middle" font-size="14" fill="#777">Don't have an account? <tspan fill="#1CBB3F" font-weight="700">Sign up</tspan></text>
+</svg>

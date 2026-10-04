@@ -1,0 +1,14 @@
+# FAQ. Neutral in every voice: trust content does not change with the persona.
+- q: "Is there a free trial?"
+  a: "Yes. You get 30 days with every feature, then it’s €11.99. No ads, and nothing in the app tries to sell you more."
+  confirm: true
+- q: "Do I need an Apple Watch?"
+  a: "No. Everything works on iPhone alone. With an Apple Watch you can log sets and start rest from your wrist, and sessions you run from the Watch are saved to Apple Health."
+- q: "Do I need an account or an internet connection?"
+  a: "Neither. Your training lives on your iPhone and works in a basement gym with no signal. It backs up to your own iCloud, so a new phone picks up where the old one left off."
+  confirm: true
+- q: "What data do you collect?"
+  a: "None. There are no analytics, no trackers and no ads in the app. Your training stays on your devices and in your own iCloud, and it is shared with a training partner only if you choose to."
+- q: "I used the old NeverSkip. What changes for me?"
+  a: "NeverSkip 2 is built only for iPhone and Apple Watch, so there is no Android version any more. Workouts from the old app don’t carry over automatically. If you’d like a copy of your old history, get in touch and I’ll help. And thank you for being there first."
+  confirm: true

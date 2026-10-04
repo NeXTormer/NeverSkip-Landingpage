@@ -1,0 +1,26 @@
+# Feature cards on the home page, in order. Voice variants live in data/voice/*.yaml as feature.<id>.title/text.
+- id: taps
+  title: "Two taps per set."
+  text: "Last session’s weight and reps are already filled in before you lift. Confirm, rest, repeat. Your phone spends more time in your pocket than in your hand."
+  icon: "<path d=\"M9 11.5V5.8a1.8 1.8 0 0 1 3.6 0v4.7\"/><path d=\"M12.6 10.2a1.8 1.8 0 0 1 3.6 0v1.3a1.8 1.8 0 0 1 3.4.8v2.9a6.5 6.5 0 0 1-6.5 6.3h-.6a6 6 0 0 1-4.6-2.2l-3-3.7a1.7 1.7 0 0 1 2.6-2.2L9 15\"/>"
+- id: progress
+  title: "Progress, measured exactly."
+  text: "Personal records, a chart for every Exercise and a volume heatmap per muscle. Warm-ups and failed sets stay in your history but never inflate your numbers."
+  icon: "<path d=\"M3 20.5h18M6 17v-4M11 17V9M16 17v-6M4 9.5l6-5 4 3 6-4.5\"/>"
+- id: plans
+  title: "Plans that survive real life."
+  text: "Set up each Day once, then run your Days as a flexible queue or a rotating cycle. Miss a Monday and nothing breaks: the next Day is simply next."
+  icon: "<path d=\"M4 6.5h9M4 11.5h9M4 16.5h5\"/><path d=\"M20 13.2a4 4 0 1 1-1.4-3.1\"/><path d=\"M19 7.2v3.1h-3.1\"/>"
+- id: iphone
+  title: "Feels like part of your iPhone."
+  text: "Rest timer on the Lock Screen and in the Dynamic Island, a Home Screen widget, an Apple Watch app, and sessions that land in Apple Health."
+  icon: "<rect x=\"6.5\" y=\"6\" width=\"11\" height=\"12\" rx=\"3\"/><path d=\"M9 6l.6-3h4.8l.6 3M9 18l.6 3h4.8l.6-3M17.5 10.5h1.2M10 12h2.5v-2\"/>"
+- id: icloud
+  title: "Your data, your iCloud."
+  text: "No account to create. Your training lives on your iPhone and backs up to your own iCloud. Share it with a training partner only if you want to."
+  icon: "<path d=\"M7 18.5h10.2a4.2 4.2 0 0 0 .5-8.37A6 6 0 0 0 6.1 9.2 4.7 4.7 0 0 0 7 18.5z\"/><path d=\"M9.8 13.8l1.6 1.6 3-3.2\"/>"
+- id: noads
+  title: "No ads. No upsells."
+  text: "Every feature is in the app. No banners, no pop-ups in the middle of a set, no premium tier hiding your own charts."
+  icon: "<circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M6 6l12 12\"/>"
+  confirm: "pricing model"

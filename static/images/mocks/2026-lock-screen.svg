@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" font-family="-apple-system, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: Lock Screen with the NeverSkip 2 rest-timer Live Activity and Dynamic Island, 2026 -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2=".4" y2="1">
+      <stop offset="0" stop-color="#0A1238"/>
+      <stop offset=".55" stop-color="#2A3FA8"/>
+      <stop offset="1" stop-color="#7A62E0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".7" cy=".35" r=".6">
+      <stop offset="0" stop-color="#668AFF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#668AFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="390" height="844" fill="url(#wall)"/>
+  <rect width="390" height="844" fill="url(#glow)"/>
+  <!-- status bar -->
+  <text x="34" y="36" font-size="16" font-weight="600" fill="#fff">9:41</text>
+  <rect x="318" y="25" width="40" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.2" opacity=".5"/>
+  <rect x="320" y="27" width="30" height="9" rx="2.5" fill="#fff"/>
+  <!-- Dynamic Island, compact: rest running -->
+  <rect x="112" y="11" width="166" height="37" rx="18.5" fill="#000"/>
+  <circle cx="133" cy="29.5" r="9" fill="none" stroke="#2C2C2E" stroke-width="3"/>
+  <path d="M133 20.5 A9 9 0 1 1 124.6 32.6" fill="none" stroke="#668AFF" stroke-width="3" stroke-linecap="round"/>
+  <text x="262" y="35" text-anchor="end" font-size="15" font-weight="600" fill="#668AFF" style="font-variant-numeric: tabular-nums">1:12</text>
+  <!-- lock, date, time -->
+  <path d="M189 78 v-5 a6 6 0 0 1 12 0 v5" fill="none" stroke="#fff" stroke-width="2"/>
+  <rect x="185" y="78" width="20" height="15" rx="3.5" fill="#fff"/>
+  <text x="195" y="134" text-anchor="middle" font-size="19" font-weight="600" fill="#fff" opacity=".85">Tuesday 29 September</text>
+  <text x="195" y="232" text-anchor="middle" font-size="104" font-weight="700" fill="#fff" opacity=".95" letter-spacing="-2">9:41</text>
+  <!-- Live Activity -->
+  <rect x="14" y="560" width="362" height="168" rx="28" fill="#141420" opacity=".82"/>
+  <!-- Plate-stack glyph beside the heading, as in SessionLiveActivity's Lock Screen view -->
+  <svg x="34" y="585" width="16" height="12.6" viewBox="162 237 700 550"><defs><mask id="ls-glyph-cut" maskUnits="userSpaceOnUse" x="162" y="237" width="700" height="550">
+      <rect x="162" y="237" width="700" height="550" fill="#fff"/>
+      <path d="M792 512A280 140 0 0 1 232 512M722 422A210 105 0 0 1 302 422" fill="none" stroke="#000" stroke-width="40"/>
+      <ellipse cx="512" cy="342" rx="84" ry="42" fill="#000"/>
+    </mask></defs><g fill="#A1A1AA" mask="url(#ls-glyph-cut)"><ellipse cx="512" cy="512" rx="350" ry="175"/><ellipse cx="512" cy="612" rx="350" ry="175"/><rect x="162" y="512" width="700" height="100"/>
+    <ellipse cx="512" cy="422" rx="280" ry="140"/><ellipse cx="512" cy="512" rx="280" ry="140"/><rect x="232" y="422" width="560" height="90"/>
+    <ellipse cx="512" cy="342" rx="210" ry="105"/><ellipse cx="512" cy="422" rx="210" ry="105"/><rect x="302" y="342" width="420" height="80"/></g></svg>
+  <text x="56" y="596" font-size="13" fill="#A1A1AA">Push · Set 3 of 4</text>
+  <text x="34" y="621" font-size="17" font-weight="600" fill="#fff">Incline Dumbbell Press</text>
+  <text x="356" y="596" text-anchor="end" font-size="12" font-weight="600" fill="#A1A1AA">REST</text>
+  <text x="356" y="624" text-anchor="end" font-size="28" font-weight="700" fill="#fff" style="font-variant-numeric: tabular-nums">1:12</text>
+  <rect x="34" y="642" width="322" height="6" rx="3" fill="#2C2C38"/>
+  <rect x="34" y="642" width="196" height="6" rx="3" fill="#668AFF"/>
+  <text x="34" y="694" font-size="14" fill="#A1A1AA">Next: <tspan fill="#fff" font-weight="600">32.5 kg × 9</tspan></text>
+  <rect x="250" y="670" width="106" height="38" rx="19" fill="#668AFF"/>
+  <text x="303" y="695" text-anchor="middle" font-size="15" font-weight="600" fill="#000">Log set</text>
+  <!-- quick actions -->
+  <circle cx="66" cy="782" r="25" fill="#000" opacity=".35"/>
+  <rect x="61" y="770" width="10" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="324" cy="782" r="25" fill="#000" opacity=".35"/>
+  <rect x="311" y="774" width="26" height="18" rx="4" fill="none" stroke="#fff" stroke-width="2"/>
+  <circle cx="324" cy="783" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+  <rect x="128" y="830" width="134" height="5" rx="2.5" fill="#fff"/>
+</svg>

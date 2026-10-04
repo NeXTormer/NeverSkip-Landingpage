@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198 242" width="198" height="242" font-family="-apple-system, 'SF Compact Text', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: Apple Watch remote for the workout player, 2026 -->
+  <rect width="198" height="242" fill="#000"/>
+  <text x="14" y="26" font-size="14" font-weight="600" fill="#668AFF">Push</text>
+  <text x="184" y="26" text-anchor="end" font-size="14" font-weight="600" fill="#fff">9:41</text>
+  <text x="14" y="60" font-size="15" font-weight="600" fill="#fff">Incline DB Press</text>
+  <text x="14" y="80" font-size="13" fill="#8E8E93">Set 3 of 4</text>
+  <text x="14" y="130" font-size="40" font-weight="700" fill="#fff" style="font-variant-numeric: tabular-nums">32.5</text>
+  <text x="112" y="130" font-size="18" font-weight="600" fill="#8E8E93">kg</text>
+  <text x="146" y="130" font-size="30" font-weight="700" fill="#fff">×9</text>
+  <rect x="14" y="148" width="170" height="4" rx="2" fill="#2C2C2E"/>
+  <rect x="14" y="148" width="104" height="4" rx="2" fill="#668AFF"/>
+  <text x="14" y="172" font-size="12" fill="#8E8E93">Rest 1:12</text>
+  <rect x="14" y="186" width="170" height="44" rx="22" fill="#668AFF"/>
+  <text x="99" y="213" text-anchor="middle" font-size="16" font-weight="600" fill="#000">Log set</text>
+</svg>

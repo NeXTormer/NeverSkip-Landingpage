@@ -1,0 +1,18 @@
+baseURL = "https://neverskipfitness.com/"
+languageCode = "en"
+title = "NeverSkip"
+# The site is one landing page plus a few legal pages; no blog machinery.
+disableKinds = ["taxonomy", "term", "rss"]
+
+[markup.goldmark.renderer]
+  # The legal pages were written for Jekyll/kramdown and may contain inline HTML.
+  unsafe = true
+
+[params]
+  description = "The strength training log for iPhone and Apple Watch. Your last numbers before every set, two taps to log, exact progress tracking. No ads, no account."
+  author = "Felix Holz"
+  authorURL = "https://felixholz.com"
+  since = 2021
+  # confirm: the App Store listing NeverSkip 2 ships under. This is the v1 listing.
+  appStoreID = "1560521531"
+  appStoreURL = "https://apps.apple.com/app/id1560521531"

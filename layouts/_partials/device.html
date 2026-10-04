@@ -1,0 +1,19 @@
+{{- /* A phone or watch frame around a mock screenshot.
+   dict: kind ("phone" | "watch"), src, alt, class, imgClass, device (data-device), lazy, priority,
+         island (false to hide the Dynamic Island, e.g. when the screenshot draws its own), tag */ -}}
+{{- $kind := .kind | default "phone" -}}
+{{- $width := cond (eq $kind "watch") 198 390 -}}
+{{- $height := cond (eq $kind "watch") 242 844 -}}
+<div class="device device--{{ $kind }}{{ with .class }} {{ . }}{{ end }}">
+  <div class="device__frame">
+    <div class="device__screen">
+      <img class="device__shot{{ with .imgClass }} {{ . }}{{ end }}"{{ with .device }} data-device="{{ . }}"{{ end }} src="{{ .src | relURL }}" alt="{{ .alt }}" width="{{ $width }}" height="{{ $height }}"{{ if .lazy }} loading="lazy"{{ end }}{{ if .priority }} fetchpriority="high"{{ end }}>
+    </div>
+    {{- if and (eq $kind "phone") (ne .island false) }}
+    <span class="device__island" aria-hidden="true"></span>
+    {{- end }}
+  </div>
+  {{- with .tag }}
+  <span class="note__tag" aria-hidden="true">{{ . }}</span>
+  {{- end }}
+</div>

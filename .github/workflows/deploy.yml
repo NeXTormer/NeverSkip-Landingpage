@@ -1,0 +1,101 @@
+# Builds the Hugo site and publishes it to GitHub Pages (neverskipfitness.com).
+#
+# One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# The custom domain stays configured there; static/CNAME is kept so the domain is recorded in the repo too.
+#
+# Pull requests only build, so a broken template fails the check without touching the live site.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never cancel a deploy halfway; queue the next one instead.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  # Same version as local development; bump both together.
+  HUGO_VERSION: 0.152.2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # configure-pages reads the Pages settings (custom domain) to get the base URL.
+      pages: write
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Install Hugo ${{ env.HUGO_VERSION }}
+        run: |
+          set -euo pipefail
+          release="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          archive="hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl --fail --silent --show-error --location --remote-name "${release}/${archive}"
+          curl --fail --silent --show-error --location --output checksums.txt "${release}/hugo_${HUGO_VERSION}_checksums.txt"
+          # Refuse to run a binary whose checksum does not match the release's published list.
+          grep " ${archive}\$" checksums.txt | sha256sum --check --strict -
+          mkdir -p "${RUNNER_TEMP}/hugo"
+          tar -xzf "${archive}" -C "${RUNNER_TEMP}/hugo" hugo
+          echo "${RUNNER_TEMP}/hugo" >> "${GITHUB_PATH}"
+
+      - name: Show Hugo version
+        run: hugo version
+
+      - name: Configure Pages
+        id: pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+
+      - name: Build
+        env:
+          HUGO_ENVIRONMENT: production
+          # On pushes, use the URL Pages reports (the custom domain); on pull requests, hugo.toml's baseURL.
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          set -euo pipefail
+          if [ -n "${BASE_URL}" ]; then
+            hugo --gc --minify --panicOnWarning --baseURL "${BASE_URL%/}/"
+          else
+            hugo --gc --minify --panicOnWarning
+          fi
+
+      - name: Check the pages people link to still exist
+        run: |
+          set -euo pipefail
+          # The App Store listing links the privacy policy; the imprint is a legal requirement.
+          for path in index.html 404.html CNAME imprint/index.html privacypolicy/index.html; do
+            test -f "public/${path}" || { echo "::error::public/${path} is missing"; exit 1; }
+          done
+
+      - name: Upload site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

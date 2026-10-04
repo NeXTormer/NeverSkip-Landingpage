@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Arial, sans-serif">
+  <!-- Mock: v1.2 workout screen, February 2024 (set table, previous numbers, rest timer) -->
+  <rect width="390" height="844" fill="#F6F7FB"/>
+  <text x="28" y="34" font-size="15" font-weight="600" fill="#111">9:41</text>
+  <rect x="318" y="24" width="44" height="12" rx="3" fill="none" stroke="#111" stroke-width="1.4"/>
+  <rect x="320" y="26" width="32" height="8" rx="1.5" fill="#111"/>
+  <text x="24" y="86" font-size="26" fill="#3F51D8">‹</text>
+  <text x="195" y="84" text-anchor="middle" font-size="17" font-weight="600" fill="#111">Push Day</text>
+  <text x="195" y="104" text-anchor="middle" font-size="13" fill="#888">32:14</text>
+  <rect x="300" y="68" width="70" height="30" rx="15" fill="#3F51D8"/>
+  <text x="335" y="88" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Finish</text>
+  <!-- exercise card 1 -->
+  <rect x="16" y="126" width="358" height="276" rx="16" fill="#fff"/>
+  <rect x="32" y="144" width="44" height="44" rx="10" fill="#EEF0FD"/>
+  <rect x="41" y="162" width="26" height="8" rx="3" fill="#3F51D8"/>
+  <text x="90" y="162" font-size="17" font-weight="600" fill="#111">Bench Press</text>
+  <text x="90" y="182" font-size="12" fill="#888">Chest · Triceps</text>
+  <text x="354" y="168" text-anchor="end" font-size="18" fill="#AAA">•••</text>
+  <g font-size="11" fill="#999" font-weight="600" letter-spacing=".5">
+    <text x="40" y="218">SET</text><text x="92" y="218">PREVIOUS</text><text x="222" y="218">KG</text><text x="272" y="218">REPS</text>
+  </g>
+  <g font-size="15" fill="#111">
+    <rect x="24" y="228" width="342" height="36" rx="8" fill="#E9F7EE"/>
+    <text x="48" y="251" text-anchor="middle">1</text><text x="92" y="251" fill="#888">80 × 8</text>
+    <text x="232" y="251" text-anchor="middle" font-weight="600">80</text><text x="286" y="251" text-anchor="middle" font-weight="600">8</text>
+    <circle cx="342" cy="246" r="11" fill="#1CBB3F"/><path d="M337 246 l4 4 7 -8" fill="none" stroke="#fff" stroke-width="2"/>
+
+    <rect x="24" y="270" width="342" height="36" rx="8" fill="#E9F7EE"/>
+    <text x="48" y="293" text-anchor="middle">2</text><text x="92" y="293" fill="#888">80 × 8</text>
+    <text x="232" y="293" text-anchor="middle" font-weight="600">82.5</text><text x="286" y="293" text-anchor="middle" font-weight="600">7</text>
+    <circle cx="342" cy="288" r="11" fill="#1CBB3F"/><path d="M337 288 l4 4 7 -8" fill="none" stroke="#fff" stroke-width="2"/>
+
+    <text x="48" y="335" text-anchor="middle">3</text><text x="92" y="335" fill="#888">80 × 7</text>
+    <rect x="208" y="316" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="232" y="335" text-anchor="middle" fill="#BBB">82.5</text>
+    <rect x="262" y="316" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="286" y="335" text-anchor="middle" fill="#BBB">7</text>
+    <circle cx="342" cy="330" r="11" fill="none" stroke="#C9C9C9" stroke-width="1.6"/>
+  </g>
+  <rect x="24" y="356" width="342" height="32" rx="8" fill="#EEF0FD"/>
+  <text x="195" y="377" text-anchor="middle" font-size="14" font-weight="600" fill="#3F51D8">+ Add Set</text>
+  <!-- exercise card 2 -->
+  <rect x="16" y="416" width="358" height="190" rx="16" fill="#fff"/>
+  <rect x="32" y="434" width="44" height="44" rx="10" fill="#EEF0FD"/>
+  <rect x="41" y="452" width="26" height="8" rx="3" fill="#3F51D8"/>
+  <text x="90" y="452" font-size="17" font-weight="600" fill="#111">Overhead Press</text>
+  <text x="90" y="472" font-size="12" fill="#888">Shoulders</text>
+  <g font-size="15" fill="#111">
+    <text x="48" y="521" text-anchor="middle">1</text><text x="92" y="521" fill="#888">50 × 8</text>
+    <rect x="208" y="502" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="232" y="521" text-anchor="middle" fill="#BBB">50</text>
+    <rect x="262" y="502" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="286" y="521" text-anchor="middle" fill="#BBB">8</text>
+    <circle cx="342" cy="516" r="11" fill="none" stroke="#C9C9C9" stroke-width="1.6"/>
+    <text x="48" y="563" text-anchor="middle">2</text><text x="92" y="563" fill="#888">50 × 7</text>
+    <rect x="208" y="544" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="232" y="563" text-anchor="middle" fill="#BBB">50</text>
+    <rect x="262" y="544" width="48" height="28" rx="6" fill="#F0F1F5"/><text x="286" y="563" text-anchor="middle" fill="#BBB">7</text>
+    <circle cx="342" cy="558" r="11" fill="none" stroke="#C9C9C9" stroke-width="1.6"/>
+  </g>
+  <rect x="16" y="620" width="358" height="80" rx="16" fill="#fff"/>
+  <text x="32" y="666" font-size="17" font-weight="600" fill="#111">Triceps Pushdown</text>
+  <text x="354" y="666" text-anchor="end" font-size="13" fill="#888">3 sets</text>
+  <!-- rest timer bar -->
+  <rect x="16" y="724" width="358" height="72" rx="20" fill="#3F51D8"/>
+  <text x="40" y="756" font-size="13" fill="#C9D0FA">Rest</text>
+  <text x="40" y="782" font-size="24" font-weight="700" fill="#fff">1:24</text>
+  <rect x="130" y="758" width="150" height="6" rx="3" fill="#5D6DE0"/>
+  <rect x="130" y="758" width="96" height="6" rx="3" fill="#fff"/>
+  <rect x="298" y="744" width="60" height="32" rx="16" fill="#fff" opacity=".18"/>
+  <text x="328" y="765" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">+30s</text>
+  <rect x="128" y="826" width="134" height="5" rx="2.5" fill="#111"/>
+</svg>

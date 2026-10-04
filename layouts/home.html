@@ -1,0 +1,340 @@
+{{- /*
+  The landing page. One-off copy is written here in the neutral voice; repeating items come from data/.
+  Elements with data-v="key" can be rewritten by the page voice (data/voice/*.yaml, applied by assets/js/voice.js).
+  Notes marked "confirm" are things Felix needs to check before launch.
+*/ -}}
+{{ define "main" }}
+
+    {{/* ============ Hero ============ */}}
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__backdrop" aria-hidden="true">
+        <div class="hero__bloom"></div>
+        <div class="hero__floor"></div>
+      </div>
+
+      <div class="hero__inner wrap">
+        <div class="hero__copy">
+          <h1 data-v="hero.title" class="hero__title" id="hero-title">Your last numbers, <span class="grad">right where you lift.</span></h1>
+          <p data-v="hero.sub" class="hero__sub">NeverSkip shows what you lifted last time before every set, logs each one in two taps, and tells you honestly whether you’re getting stronger. Built by a lifter who has trained with it every week since 2021.</p>
+          <div class="hero__actions">
+            {{ partial "store-badge.html" (dict) }}
+            <a data-v="hero.link" class="link-arrow" href="#story">Five years in the gym <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="promises" role="list">
+            <li class="promise">No ads</li>
+            <li class="promise">No account</li>
+            <li class="promise">Works offline</li>
+          </ul>
+        </div>
+
+        <div class="hero__stage">
+          <div class="hero__devices" data-tilt>
+            {{ partial "device.html" (dict "class" "hero__aux" "src" "images/mocks/2026-v2-player.svg" "alt" "NeverSkip workout player showing set 3 of incline dumbbell press (mock)") }}
+            {{ partial "device.html" (dict "class" "hero__phone" "src" "images/mocks/2026-v2-home.svg" "alt" "NeverSkip home screen with today’s session, personal records and active days (mock)" "priority" true) }}
+            {{ partial "device.html" (dict "kind" "watch" "class" "hero__watch" "src" "images/mocks/2026-watch.svg" "alt" "NeverSkip on Apple Watch, ready to log the next set (mock)") }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ Features ============ */}}
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow section__eyebrow">Features</p>
+          <h2 data-v="features.title" class="display" id="features-title">Less phone. More lifting.</h2>
+          <p data-v="features.lead" class="section__lead">Everything you need between sets is already on screen. Everything you don’t need isn’t there at all.</p>
+        </header>
+        <div class="features__grid" data-spotlight>
+          {{- range site.Data.features }}
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24">{{ .icon | safeHTML }}</svg></div>
+            <h3 data-v="feature.{{ .id }}.title" class="feature__title">{{ .title }}</h3>
+            <p data-v="feature.{{ .id }}.text" class="feature__text">{{ .text }}</p>
+          </article>
+          {{- end }}
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ iPhone and Apple Watch ============ */}}
+    <section class="section apple" id="apple" aria-labelledby="apple-title">
+      <div class="apple__ambient" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow section__eyebrow">Made for iPhone and Apple Watch</p>
+          <h2 data-v="apple.title" class="display" id="apple-title">At home on every screen you own.</h2>
+          <p data-v="apple.lead" class="section__lead">NeverSkip 2 is built only for Apple devices, so it uses everything they’re good at. Your rest timer, your next set and your training week are always one glance away.</p>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile--lock reveal">
+            <div class="tile__copy">
+              <h3 data-v="tile.lock.title" class="tile__title">Rest on the Lock Screen.</h3>
+              <p data-v="tile.lock.text" class="tile__text">A Live Activity counts down your rest on the Lock Screen and in the Dynamic Island. Log the next set without unlocking.</p>
+            </div>
+            <div class="tile__visual">
+              {{ partial "device.html" (dict "class" "tile__phone" "src" "images/mocks/2026-lock-screen.svg" "alt" "Lock Screen with the NeverSkip rest timer counting down 1:12 (mock)" "lazy" true "island" false) }}
+            </div>
+          </article>
+
+          <article class="tile tile--watch reveal">
+            <div class="tile__visual">
+              {{ partial "device.html" (dict "kind" "watch" "class" "tile__watch" "src" "images/mocks/2026-watch.svg" "alt" "NeverSkip on Apple Watch showing the next set (mock)" "lazy" true) }}
+            </div>
+            <div class="tile__copy">
+              <h3 data-v="tile.watch.title" class="tile__title">Leave the phone in your bag.</h3>
+              <p data-v="tile.watch.text" class="tile__text">See the set, log it and start rest from your wrist.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--health reveal">
+            <div class="tile__visual">
+              <svg class="rings" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" class="rings__track rings__track--1"/>
+                <circle cx="60" cy="60" r="50" class="rings__arc rings__arc--1" style="--p: .82"/>
+                <circle cx="60" cy="60" r="36" class="rings__track rings__track--2"/>
+                <circle cx="60" cy="60" r="36" class="rings__arc rings__arc--2" style="--p: .64"/>
+                <circle cx="60" cy="60" r="22" class="rings__track rings__track--3"/>
+                <circle cx="60" cy="60" r="22" class="rings__arc rings__arc--3" style="--p: .9"/>
+              </svg>
+            </div>
+            <div class="tile__copy">
+              <h3 data-v="tile.health.title" class="tile__title">Counts in Apple Health.</h3>
+              <p data-v="tile.health.text" class="tile__text">Sessions you run from Apple Watch are saved to Health as strength workouts.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--widget reveal">
+            <div class="tile__copy">
+              <h3 data-v="tile.widget.title" class="tile__title">Your week on the Home Screen.</h3>
+              <p data-v="tile.widget.text" class="tile__text">The Active Days widget shows every day you trained, week by week, without opening the app.</p>
+            </div>
+            <div class="tile__visual">
+              <img class="widget" src="{{ "images/mocks/2026-widget.svg" | relURL }}" alt="Active Days widget showing three days this week (mock)" width="364" height="170" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ Voices ============ */}}
+    {{- $first := index site.Data.voices 0 }}
+    <section class="section voices" id="voices" aria-labelledby="voices-title">
+      <div class="voices__ambient" aria-hidden="true"></div>
+      <div class="wrap voices__inner">
+        <div class="voices__copy">
+          <p class="eyebrow section__eyebrow">Voices</p>
+          <h2 class="display" id="voices-title">Choose how NeverSkip talks to you.</h2>
+          <p class="section__lead">Same app, same numbers. Only the words change. Pick the voice that gets you under the bar, and switch back with one tap.</p>
+          <div class="persona-tabs" role="tablist" aria-label="Preview a voice">
+            {{- range $i, $v := site.Data.voices }}
+            <button class="persona-tab" type="button" role="tab" id="persona-tab-{{ $v.id }}" aria-selected="{{ eq $i 0 }}" aria-controls="persona-preview" data-persona="{{ $v.id }}" tabindex="{{ cond (eq $i 0) 0 -1 }}">{{ $v.name }}</button>
+            {{- end }}
+          </div>
+          <p class="persona__desc" data-persona-desc aria-live="polite">{{ $first.desc }}</p>
+          <button class="persona__apply" type="button" data-persona-apply hidden>Read this page in another voice</button>
+          <ul class="limits" role="list" aria-label="Rules every voice follows">
+            <li class="limit">Never shames you</li>
+            <li class="limit">Missed days stay soft</li>
+            <li class="limit">No comments on your body or weight</li>
+            <li class="limit">Never pushes through pain or illness</li>
+            <li class="limit">Nothing explicit</li>
+          </ul>
+          <p class="voices__private">Your Lock Screen and notifications stay neutral unless you switch them on separately.</p>
+        </div>
+        <div class="voices__stage">
+          <div class="device device--phone voices__phone">
+            <div class="device__frame">
+              <div class="device__screen" id="persona-preview" role="tabpanel" aria-labelledby="persona-tab-{{ $first.id }}" data-persona-preview>
+                <div class="moments">
+                  <p class="moments__status" aria-hidden="true">9:41</p>
+                  <p class="moments__eyebrow">Tuesday</p>
+                  <p class="moments__title">Push</p>
+                  <ul class="moments__list" role="list">
+                    {{- range site.Data.moments }}
+                    <li class="moment moment--{{ .id }}">
+                      <span class="moment__icon"><svg viewBox="0 0 20 20">{{ .icon | safeHTML }}</svg></span>
+                      <span class="moment__body"><span class="moment__label">{{ .label }}</span><span class="moment__text" data-moment="{{ .id }}">{{ index .text $first.id }}</span></span>
+                    </li>
+                    {{- end }}
+                  </ul>
+                </div>
+              </div>
+              <span class="device__island" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ Story ============ */}}
+    <section class="section story" id="story" aria-labelledby="story-title" data-story>
+      <div class="story__ambient" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="section__head story__head reveal">
+          <p class="eyebrow section__eyebrow">{{ site.Params.since }} – {{ now.Year }}</p>
+          <h2 data-v="story.title" class="display" id="story-title">Five years in the gym</h2>
+          <p data-v="story.lead" class="section__lead">NeverSkip isn’t a weekend project. It has been used every training week since 2021, and every version grew out of something that was missing on the gym floor. Scroll through how it got here.</p>
+        </header>
+
+        <div class="story__body">
+          {{/* Sticky stage: script.js fills it from the milestones below; hidden without JS and on small screens. */}}
+          <div class="stage" data-stage>
+            <div class="stage__scene" aria-hidden="true">
+              <div class="stage__glow"></div>
+              <p class="stage__year"><span class="stage__year-num" data-stage-year>{{ site.Params.since }}</span></p>
+              <div class="stage__devices">
+                <div class="device device--phone stage__aux" data-stage-aux>
+                  <div class="device__frame"><div class="device__screen" data-stage-slot></div><span class="device__island"></span></div>
+                </div>
+                <div class="device device--phone stage__phone">
+                  <div class="device__frame"><div class="device__screen" data-stage-screens><span class="device__sheen"></span></div><span class="device__island"></span></div>
+                </div>
+                <div class="device device--watch stage__watch" data-stage-watch>
+                  <div class="device__frame"><div class="device__screen" data-stage-slot></div></div>
+                </div>
+                <div class="stage__card">
+                  <p class="stage__card-date" data-stage-card-date></p>
+                  <p class="stage__card-title" data-stage-card-title></p>
+                </div>
+              </div>
+            </div>
+            <div class="stage__controls">
+              <p class="stage__now" aria-hidden="true"><span data-stage-month>Jan</span> <span class="stage__now-year" data-stage-year-small>{{ site.Params.since }}</span></p>
+              <div class="scrub">
+                <label class="sr-only" for="scrub">Travel through the story</label>
+                <input class="scrub__input" id="scrub" type="range" min="0" max="{{ sub (len site.Data.timeline) 1 }}" step="1" value="0" data-scrub>
+                <div class="scrub__ticks" aria-hidden="true" data-scrub-ticks></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story__track">
+            <span class="story__rail" aria-hidden="true"><span class="story__rail-fill"></span></span>
+            <ol class="story__list" data-story-list>
+              {{- range site.Data.timeline }}
+              <li class="milestone" data-year="{{ .year }}" data-month="{{ .month }}" data-accent="{{ .accent }}">
+                <p class="milestone__date"><time datetime="{{ .id }}">{{ .label }}</time></p>
+                <h3 data-v="milestone.{{ .id }}.title" class="milestone__title">{{ .title }}</h3>
+                <p data-v="milestone.{{ .id }}.text" class="milestone__text">{{ .text }}</p>
+                {{- with .shots }}
+                <div class="milestone__media{{ if gt (len .) 1 }} milestone__media--group{{ end }}">
+                  {{- range . }}
+                  {{ partial "device.html" (dict "kind" (cond (eq .device "watch") "watch" "phone") "src" .src "alt" .alt "imgClass" "milestone__shot" "device" .device "lazy" true) }}
+                  {{- end }}
+                </div>
+                {{- end }}
+              </li>
+              {{- end }}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ In numbers ============ */}}
+    <section class="section numbers" id="numbers" aria-labelledby="numbers-title">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <h2 data-v="numbers.title" class="display" id="numbers-title">The short version</h2>
+        </header>
+
+        <ul class="stats" role="list">
+          {{- range site.Data.stats }}
+          <li class="stat reveal">
+            <p class="stat__value" data-count="{{ .value }}"{{ with .from }} data-from="{{ . }}"{{ end }}>{{ .value }}</p>
+            <p data-v="stat.{{ .id }}" class="stat__label">{{ .label }}</p>
+          </li>
+          {{- end }}
+        </ul>
+
+        <div class="without reveal">
+          <h3 data-v="without.title" class="without__title">What you won’t find</h3>
+          <p data-v="without.lead" class="without__lead">NeverSkip does one thing: logging strength training. Everything else stays out of your way.</p>
+          <ul data-v="without.list" class="without__list" role="list">
+            <li class="without__item">Ads</li>
+            <li class="without__item">An account to create</li>
+            <li class="without__item">A social feed</li>
+            <li class="without__item">Calorie counting</li>
+            <li class="without__item">AI-generated programmes</li>
+            <li class="without__item">Pop-ups in the middle of a set</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ A note from the developer ============
+         Neutral in every voice: these are Felix's own words, not the app's persona. confirm: wording */}}
+    <section class="section note" id="note" aria-labelledby="note-title">
+      <div class="wrap note__inner">
+        <div class="note__visual">
+          <p class="eyebrow section__eyebrow">A note from the developer</p>
+          <h2 class="display note__title reveal" id="note-title">I built it because I needed it.</h2>
+          <div class="note__devices">
+            {{ partial "device.html" (dict "class" "note__old" "src" "images/mocks/2021-10-home.svg" "alt" "NeverSkip in 2021 (mock)" "lazy" true "tag" "2021") }}
+            {{ partial "device.html" (dict "class" "note__new" "src" "images/mocks/2026-v2-player.svg" "alt" "NeverSkip today (mock)" "lazy" true "tag" "Today") }}
+          </div>
+        </div>
+        <div class="note__body">
+          <p class="note__text" data-words>I started NeverSkip in 2021 because I kept skipping sessions and forgetting what I lifted the week before. I’ve logged <em>every training week since</em> with it. Every feature exists because I missed it on the gym floor, and everything I left out is something that got in my way. It’s made by one person and paid for by the people who use it, and it will stay that way: <em>no ads, no data sold, no feed to scroll.</em></p>
+          <p class="note__sign"><span class="note__name">{{ site.Params.author }}</span> <span class="note__role">Developer of NeverSkip</span></p>
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ FAQ (neutral in every voice) ============ */}}
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__inner">
+        <header class="section__head faq__head reveal">
+          <p class="eyebrow section__eyebrow">Questions</p>
+          <h2 class="display" id="faq-title">Good to know</h2>
+        </header>
+        <div class="faq__list">
+          {{- range site.Data.faq }}
+          <details class="faq__item">
+            <summary class="faq__q">{{ .q }}</summary>
+            <p class="faq__a">{{ .a }}</p>
+          </details>
+          {{- end }}
+        </div>
+      </div>
+    </section>
+
+    {{/* ============ Pricing and download ============ confirm: price, period and App Store listing */}}
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="price reveal">
+          <h2 class="eyebrow section__eyebrow" id="pricing-title">Pricing</h2>
+          <p data-v="price.lead" class="price__lead"><span class="price__trial">Try it free for 30 days.</span> <span class="price__then">Then <span class="price__amount">€11.99</span>, everything included.</span></p>
+          {{ partial "store-badge.html" (dict "large" true) }}
+          <ul class="promises promises--center" role="list">
+            <li class="promise">No ads</li>
+            <li class="promise">No upsells</li>
+            <li class="promise">No account</li>
+          </ul>
+          <p class="price__fine">iPhone with iOS 26 or later. Apple Watch optional.</p>
+        </div>
+      </div>
+    </section>
+{{ end }}
+
+{{ define "after" }}
+  {{- $gated := where site.Data.voices "gate" true }}
+  {{- with index $gated 0 }}
+  <dialog class="gate" id="voice-gate" aria-labelledby="gate-title" data-voice-gate>
+    <form class="gate__inner" method="dialog">
+      <p class="eyebrow">{{ .name }} voice</p>
+      <h2 class="gate__title" id="gate-title">Before you switch</h2>
+      <p class="gate__text">{{ .name }} is praise-forward and frames each training day as a task set for you, with a dominant/submissive flavour. It never shames you and is never explicit.</p>
+      <p class="gate__text">It’s meant for adults. Only the words on this page change, and you can switch back any time from the Voice menu.</p>
+      <div class="gate__actions">
+        <button class="gate__secondary" value="cancel">Not now</button>
+        <button class="gate__primary" value="confirm">I’m 18 or older, switch</button>
+      </div>
+    </form>
+  </dialog>
+  {{- end }}
+  {{ partial "voice-copy.html" . }}
+{{ end }}

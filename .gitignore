@@ -1,4 +1,7 @@
-.bundle
-.sass-cache
-_site
-Gemfile.lock
+# Hugo build output and caches
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# macOS
+.DS_Store

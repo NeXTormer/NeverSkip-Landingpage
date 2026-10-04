@@ -1,0 +1,74 @@
+# Page copy in the drill voice, keyed like the data-v attributes on the home page.
+# Neutral is the page itself; a key missing here falls back to neutral. Values are HTML.
+
+# Navigation
+"nav.cta": "Enlist"
+"nav.story": "Service"
+
+# Hero
+"hero.title": "Bar’s loaded.<br> <span class=\"grad\">Get under it.</span>"
+"hero.sub": "Your last numbers are on screen before every set. Lift, log it in two taps, move on. NeverSkip records every kilo and tells you straight whether you’re getting stronger. On duty every training week since 2021."
+"hero.link": "Five years of service <span aria-hidden=\"true\">→</span>"
+
+# Features section
+"features.title": "Eyes on the bar."
+"features.lead": "Everything you need between sets is already on screen. Nothing else made the cut."
+
+# Feature cards
+"feature.taps.title": "Two taps. Next set."
+"feature.taps.text": "Last session’s weight and reps are filled in before you lift. Confirm, rest, go again. Phone in the pocket, hands on the bar."
+"feature.progress.title": "Every kilo on the record."
+"feature.progress.text": "Personal records, a chart for every Exercise and a volume heatmap per muscle. Warm-ups and failed sets are logged, but only working sets make the chart. No padding the numbers."
+"feature.plans.title": "Orders for every day."
+"feature.plans.text": "Set up each Day once, then run your Days as a flexible queue or a rotating cycle. Miss a Monday and the plan holds: the next Day is simply next."
+"feature.iphone.title": "Standing by on every screen."
+"feature.iphone.text": "Rest timer on the Lock Screen and in the Dynamic Island, a Home Screen widget, an Apple Watch app, and sessions logged to Apple Health."
+"feature.icloud.title": "Need to know only."
+"feature.icloud.text": "No account. Your training lives on your iPhone and backs up to your own iCloud. It goes to a training partner only on your orders."
+"feature.noads.title": "Zero distractions."
+"feature.noads.text": "No ads. No upsells. No banners, no pop-ups mid-set, no premium tier between you and your own charts."
+
+# iPhone and Apple Watch
+"apple.title": "Covered from every angle."
+"apple.lead": "NeverSkip 2 is built only for Apple devices. Rest timer, next set and training week are always one glance away. No hunting for them."
+
+# iPhone and Apple Watch tiles
+"tile.lock.title": "Rest. Clock’s running."
+"tile.lock.text": "A Live Activity counts down your rest on the Lock Screen and in the Dynamic Island. When it hits zero, log the next set without unlocking."
+"tile.watch.title": "Hands on the bar."
+"tile.watch.text": "Phone stays in the bag. See the set, log it and start rest from your wrist."
+"tile.health.title": "Every session logged."
+"tile.health.text": "Sessions you run from Apple Watch are saved to Apple Health as strength workouts."
+"tile.widget.title": "Your service record."
+"tile.widget.text": "The Active Days widget puts every day you reported for training on your Home Screen, week by week."
+
+# Story
+"story.title": "Five years of service"
+"story.lead": "NeverSkip didn’t show up last month. It has been on duty every training week since 2021, and every version fixed something that was missing on the gym floor. Scroll for the record."
+
+# Story milestones
+"milestone.2021-01.text": "One lifter, two problems: skipped sessions and forgotten numbers. NeverSkip was built to fix both."
+"milestone.2021-10.title": "Daily orders"
+"milestone.2021-10.text": "Upcoming workouts on the home screen and a weekly streak to defend."
+"milestone.2021-12.title": "Deployed"
+"milestone.2021-12.text": "NeverSkip ships to the App Store, and other lifters fall in."
+"milestone.2022-09.text": "Personal records, goals with a deadline and a calendar of every day you reported for training."
+"milestone.2024-02.text": "Last session’s numbers beside every set, so you know exactly what to beat. A rest timer keeps the session on schedule."
+"milestone.2026-03.text": "Five years of training showed what earns its place and what doesn’t. Time to rebuild around that."
+"milestone.2026-09.text": "Built only for iPhone and Apple Watch. Faster, works without signal, no account, rest timer on the Lock Screen."
+
+# Numbers
+"numbers.title": "The briefing"
+
+# Stats
+"stat.years": "years on duty, every training week since 2021"
+"stat.taps": "taps to log a set. That’s it."
+"stat.developer": "developer, who trains with it every week and reads every email"
+
+# What you won’t find
+"without.title": "Cut from the mission"
+"without.lead": "NeverSkip has one job: logging strength training. Everything else was cut."
+"without.list": "<li class=\"without__item\">Ads</li><li class=\"without__item\">An account to create</li><li class=\"without__item\">A social feed</li><li class=\"without__item\">Calorie counting</li><li class=\"without__item\">AI-generated programmes</li><li class=\"without__item\">Pop-ups in the middle of a set</li><li class=\"without__item\">Insults</li><li class=\"without__item\">Training through pain</li>"
+
+# Pricing
+"price.lead": "<span class=\"price__trial\">30 days, free.</span> <span class=\"price__then\">Then <span class=\"price__amount\">€11.99</span>. Full kit included.</span>"
