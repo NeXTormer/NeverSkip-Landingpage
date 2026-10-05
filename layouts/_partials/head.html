@@ -30,7 +30,7 @@
 <link rel="icon" type="image/png" sizes="64x64" href="{{ "brand/app-icon-favicon-64.png" | relURL }}" id="favicon-64">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "brand/app-icon-favicon-32.png" | relURL }}" id="favicon-32">
 <link rel="apple-touch-icon" href="{{ "brand/app-icon-apple-touch.png" | relURL }}" id="touch-icon">
-{{- if .IsHome }}
+{{- if or .IsHome .Params.voice }}
 {{- $voice := resources.Get "js/voice.js" | minify | fingerprint }}
 <script src="{{ $voice.RelPermalink }}" integrity="{{ $voice.Data.Integrity }}" defer></script>
 {{- end }}

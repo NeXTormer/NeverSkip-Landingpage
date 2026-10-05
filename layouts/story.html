@@ -1,0 +1,83 @@
+{{- /*
+  The story page: NeverSkip's timeline from 2021 to today, kept off the landing page.
+  Milestones come from data/timeline.yaml; data-v keys are rewritten by the page voice like on the home page.
+*/ -}}
+{{ define "main" }}
+    {{/* ============ Story ============ */}}
+    <section class="section story" id="story" aria-labelledby="story-title" data-story>
+      <div class="story__ambient" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="section__head story__head reveal">
+          <h1 data-v="story.title" class="display" id="story-title">Five years in the gym</h1>
+          <p data-v="story.lead" class="section__lead">NeverSkip isn’t a weekend project. It has been used every training week since 2021, and every version grew out of something that was missing on the gym floor. Scroll through how it got here.</p>
+        </header>
+
+        <div class="story__body">
+          {{/* Sticky stage: script.js fills it from the milestones below; hidden without JS and on small screens. */}}
+          <div class="stage" data-stage>
+            <div class="stage__scene" aria-hidden="true">
+              <div class="stage__glow"></div>
+              <p class="stage__year"><span class="stage__year-num" data-stage-year>{{ site.Params.since }}</span></p>
+              <div class="stage__devices">
+                <div class="device device--phone stage__aux" data-stage-aux>
+                  <div class="device__frame"><div class="device__screen" data-stage-slot></div><span class="device__island"></span></div>
+                </div>
+                <div class="device device--phone stage__phone">
+                  <div class="device__frame"><div class="device__screen" data-stage-screens><span class="device__sheen"></span></div><span class="device__island"></span></div>
+                </div>
+                <div class="device device--watch stage__watch" data-stage-watch>
+                  <div class="device__frame"><div class="device__screen" data-stage-slot></div></div>
+                </div>
+                <div class="stage__card">
+                  <p class="stage__card-date" data-stage-card-date></p>
+                  <p class="stage__card-title" data-stage-card-title></p>
+                </div>
+              </div>
+            </div>
+            <div class="stage__controls">
+              <p class="stage__now" aria-hidden="true"><span data-stage-month>Jan</span> <span class="stage__now-year" data-stage-year-small>{{ site.Params.since }}</span></p>
+              <div class="scrub">
+                <label class="sr-only" for="scrub">Travel through the story</label>
+                <input class="scrub__input" id="scrub" type="range" min="0" max="{{ sub (len site.Data.timeline) 1 }}" step="1" value="0" data-scrub>
+                <div class="scrub__ticks" aria-hidden="true" data-scrub-ticks></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story__track">
+            <span class="story__rail" aria-hidden="true"><span class="story__rail-fill"></span></span>
+            <ol class="story__list" data-story-list>
+              {{- range site.Data.timeline }}
+              <li class="milestone" data-year="{{ .year }}" data-month="{{ .month }}" data-accent="{{ .accent }}">
+                <p class="milestone__date"><time datetime="{{ .id }}">{{ .label }}</time></p>
+                <h3 data-v="milestone.{{ .id }}.title" class="milestone__title">{{ .title }}</h3>
+                <p data-v="milestone.{{ .id }}.text" class="milestone__text">{{ .text }}</p>
+                {{- with .shots }}
+                <div class="milestone__media{{ if gt (len .) 1 }} milestone__media--group{{ end }}">
+                  {{- range . }}
+                  {{ partial "device.html" (dict "kind" (cond (eq .device "watch") "watch" "phone") "src" .src "alt" .alt "imgClass" "milestone__shot" "device" .device "lazy" true) }}
+                  {{- end }}
+                </div>
+                {{- end }}
+              </li>
+              {{- end }}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" aria-label="Download">
+      <div class="pricing__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="price reveal">
+          {{ partial "store-badge.html" (dict "large" true) }}
+          <a class="link-arrow price__more" href="{{ "/" | relURL }}#features">See what NeverSkip does today <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+{{ end }}
+
+{{ define "after" }}
+  {{ partial "voice-after.html" . }}
+{{ end }}

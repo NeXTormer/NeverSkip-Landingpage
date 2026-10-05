@@ -15,14 +15,16 @@ Use Hugo 0.152.2 (the version the workflow pins) or newer.
 | Change | Edit |
 |---|---|
 | Hero, section headings, the note, pricing text | `layouts/home.html` (written in the neutral voice) |
-| Feature cards, story milestones, stats, FAQ | `data/features.yaml`, `timeline.yaml`, `stats.yaml`, `faq.yaml` |
+| The story page (timeline from 2021 to today) | `layouts/story.html`, `content/story.md` |
+| Feature cards, story milestones, FAQ | `data/features.yaml`, `timeline.yaml`, `faq.yaml` |
 | The Drill and Devoted page copy | `data/voice/drill.yaml`, `data/voice/devoted.yaml` |
 | Voice names, descriptions, the 18+ gate, voice icons | `data/voices.yaml` |
 | The in-app moments in the voice preview | `data/moments.yaml` |
 | Imprint and privacy policy | `content/imprint.md`, `content/privacypolicy.md` |
 | Styles and behaviour | `assets/css/main.css`, `assets/js/script.js`, `assets/js/voice.js` |
 | Fonts (self-hosted Inter and Inter Tight, SIL OFL) | `static/fonts/` |
-| Mock screenshots, app icons, the plate glyph | `static/images/mocks/`, `static/brand/` |
+| Real app screenshots (hero, iPhone and Watch tiles, the note) | `static/images/screens/` |
+| Mock screenshots for the story timeline, app icons, the plate glyph | `static/images/mocks/`, `static/brand/` |
 | App Store ID and link, author link | `hugo.toml` → `[params]` |
 
 ### How the voices work

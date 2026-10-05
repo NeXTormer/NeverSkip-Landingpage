@@ -9,11 +9,11 @@
     <nav class="nav__links" aria-label="Sections">
       <a href="{{ $home }}#features">Features</a>
       <a href="{{ $home }}#apple">iPhone &amp; Watch</a>
-      <a data-v="nav.story" href="{{ $home }}#story">Story</a>
-      <a href="{{ $home }}#pricing">Pricing</a>
       <a href="{{ $home }}#faq">FAQ</a>
+      <a href="{{ $home }}#pricing">Pricing</a>
+      <a data-v="nav.story" href="{{ "story/" | relURL }}"{{ if eq .RelPermalink ("story/" | relURL) }} aria-current="page"{{ end }}>Story</a>
     </nav>
-    {{- if .IsHome }}
+    {{- if or .IsHome .Params.voice }}
     <div class="voice" data-voice-menu>
       <button class="voice__button" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="voice-menu" data-voice-toggle>
         <svg class="voice__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5z"/></svg>

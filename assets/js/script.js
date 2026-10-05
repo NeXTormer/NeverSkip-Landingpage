@@ -190,34 +190,6 @@
     });
   }
 
-  // ---------- Numbers: count up once visible ----------
-
-  const counters = $$('[data-count]');
-  const countUp = (el) => {
-    const to = Number(el.dataset.count);
-    const from = Number(el.dataset.from || 0);
-    const suffix = el.dataset.suffix || '';
-    const start = performance.now();
-    const duration = 1400;
-    const step = (now) => {
-      const t = clamp((now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 4);
-      el.textContent = `${Math.round(from + (to - from) * eased)}${suffix}`;
-      if (t < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-  if (!reduce && counters.length) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        countUp(e.target);
-        counterObserver.unobserve(e.target);
-      }
-    }, { threshold: 0.6 });
-    counters.forEach((el) => counterObserver.observe(el));
-  }
-
   // ---------- Commit chart: bars grow in, staggered ----------
 
   const chart = $('[data-chart]');

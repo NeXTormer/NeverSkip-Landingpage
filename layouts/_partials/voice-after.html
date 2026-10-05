@@ -1,0 +1,16 @@
+{{- /* The 18+ gate and the copy voice.js needs, for every page that has the voice menu. */ -}}
+  {{- $gated := where site.Data.voices "gate" true }}
+  {{- with index $gated 0 }}
+  <dialog class="gate" id="voice-gate" aria-labelledby="gate-title" data-voice-gate>
+    <form class="gate__inner" method="dialog">
+      <h2 class="gate__title" id="gate-title">Before you switch</h2>
+      <p class="gate__text">{{ .name }} is praise-forward and frames each training day as a task set for you, with a dominant/submissive flavour. It never shames you and is never explicit.</p>
+      <p class="gate__text">It’s meant for adults. Only the words on this page change, and you can switch back any time from the Voice menu.</p>
+      <div class="gate__actions">
+        <button class="gate__secondary" value="cancel">Not now</button>
+        <button class="gate__primary" value="confirm">I’m 18 or older, switch</button>
+      </div>
+    </form>
+  </dialog>
+  {{- end }}
+  {{ partial "voice-copy.html" . }}
