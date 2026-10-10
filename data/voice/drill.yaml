@@ -63,4 +63,4 @@
 "without.list": "<li class=\"without__item\">Ads</li><li class=\"without__item\">An account to create</li><li class=\"without__item\">A social feed</li><li class=\"without__item\">Calorie counting</li><li class=\"without__item\">AI-generated programmes</li><li class=\"without__item\">Pop-ups in the middle of a set</li><li class=\"without__item\">Insults</li><li class=\"without__item\">Training through pain</li>"
 
 # Pricing
-"price.lead": "<span class=\"price__trial\">30 days, free.</span> <span class=\"price__then\">Then <span class=\"price__amount\">€11.99</span>. Full kit included.</span>"
+"price.lead": "<span class=\"price__trial\">Free during beta and early access.</span> <span class=\"price__then\">Pricing comes later.</span>"

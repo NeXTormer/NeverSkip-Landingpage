@@ -16,3 +16,5 @@ disableKinds = ["taxonomy", "term", "rss"]
   # confirm: the App Store listing NeverSkip 2 ships under. This is the v1 listing.
   appStoreID = "1560521531"
   appStoreURL = "https://apps.apple.com/app/id1560521531"
+  # Temporary: while set, every download button reads "Try the beta in TestFlight". Delete this line to go back to the App Store button.
+  testflightURL = "https://testflight.apple.com/join/kZErjQam"

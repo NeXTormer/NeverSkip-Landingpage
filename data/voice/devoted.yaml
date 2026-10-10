@@ -62,4 +62,4 @@
 "without.list": "<!-- repeat: without --> <li class=\"without__item\">Ads</li> <li class=\"without__item\">An account to create</li> <li class=\"without__item\">A social feed</li> <li class=\"without__item\">Calorie counting</li> <li class=\"without__item\">AI-generated programmes</li> <li class=\"without__item\">Pop-ups in the middle of a set</li> <li class=\"without__item\">Guilt for a missed day</li> <li class=\"without__item\">Remarks about your body</li>"
 
 # Pricing
-"price.lead": "<span class=\"price__trial\">Give me 30 days.</span> <span class=\"price__then\">Then <span class=\"price__amount\">€11.99</span>, and everything is yours.</span>"
+"price.lead": "<span class=\"price__trial\">Free while we beta and build it together.</span> <span class=\"price__then\">Pricing comes later.</span>"
